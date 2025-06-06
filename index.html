@@ -612,7 +612,7 @@
                 // Array of video sources for 3D Animation (filter-branding)
                 const brandingVideos = [
                   {
-                  src: "https://www.youtube.com/embed/GXcmBzZF7yg",
+                    src: `<iframe src="https://www.youtube.com/embed/GXcmBzZF7yg" width="100%" height="230" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`,
                     poster: "assets/img/portfolio/3danimation/img/logo_1.png",
                     title: "Mr & Ms CCS 2023 Logo Animation",
                   },
@@ -724,7 +724,6 @@
                     "col-lg-4 col-md-6 portfolio-item isotope-item filter-branding";
                   let mediaContent = "";
 
-                  // Check if src is an iframe (Google Drive embed) or a video file
                   if (
                     typeof video.src === "string" &&
                     video.src.trim().startsWith("<iframe")
