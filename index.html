@@ -722,38 +722,15 @@
                   const col = document.createElement("div");
                   col.className =
                     "col-lg-4 col-md-6 portfolio-item isotope-item filter-branding";
-                  let mediaContent = "";
-
-                  if (
-                    typeof video.src === "string" &&
-                    video.src.trim().startsWith("<iframe")
-                  ) {
-                    mediaContent = video.src;
-                  } else {
-                    mediaContent = `
-        <video class="img-fluid" controls poster="${video.poster}" style="width:100%;height:230px;object-fit:cover;">
-          <source src="${video.src}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      `;
-                  }
-
+                  // Only use iframe embed for YouTube links
                   col.innerHTML = `
-      <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
-        ${mediaContent}
-        <div class="portfolio-info d-flex flex-column align-items-center justify-content-center" style="width: 100%;">
-          <h4>${video.title || ""}</h4>
-          <a href="${
-            typeof video.src === "string" &&
-            video.src.trim().startsWith("<iframe")
-              ? "#"
-              : video.src
-          }" data-gallery="portfolio-gallery-branding" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
-            <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
-          </a>
-        </div>
-      </div>
-    `;
+                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
+                      ${video.src}
+                      <div class="portfolio-info d-flex flex-column align-items-center justify-content-center" style="width: 100%;">
+                        <h4>${video.title || ""}</h4>
+                      </div>
+                    </div>
+                  `;
                   brandingContainer.appendChild(col);
                 });
               </script>
