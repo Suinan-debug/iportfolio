@@ -392,8 +392,8 @@
               data-aos-delay="100"
             >
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">2D Artworks</li>
-              <li data-filter=".filter-product">3D Artworks</li>
+              <li data-filter=".filter-app">3D Video Motion</li>
+              <li data-filter=".filter-product">Social Media Posters</li>
               <li data-filter=".filter-branding">3D Animation</li>
               <li data-filter=".filter-books">Game Assets</li>
             </ul>
@@ -404,206 +404,140 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <!-- Portfolio NFT Images Loop Start -->
-              <script>
-                const nftImages = [
-                  "assets/img/portfolio/2DArt/1.png",
-                  "assets/img/portfolio/2DArt/2.png",
-                  "assets/img/portfolio/2DArt/3.png",
-                  "assets/img/portfolio/2DArt/4.png",
-                  "assets/img/portfolio/2DArt/5.png",
-                  "assets/img/portfolio/2DArt/6.png",
-                  "assets/img/portfolio/2DArt/7.png",
-                  "assets/img/portfolio/2DArt/8.png",
-                  "assets/img/portfolio/2DArt/9.png",
-                  "assets/img/portfolio/2DArt/10.png",
-                  "assets/img/portfolio/2DArt/11.png",
-                  "assets/img/portfolio/2DArt/12.png",
-                  "assets/img/portfolio/2DArt/13.png",
-                  "assets/img/portfolio/2DArt/14.png",
-                  "assets/img/portfolio/2DArt/15.png",
-                  "assets/img/portfolio/2DArt/16.png",
-                  "assets/img/portfolio/2DArt/17.png",
-                  "assets/img/portfolio/2DArt/18.png",
-                  "assets/img/portfolio/2DArt/19.png",
-                  "assets/img/portfolio/2DArt/20.png",
-                  "assets/img/portfolio/2DArt/21.png",
-                  "assets/img/portfolio/2DArt/22.png",
-                  "assets/img/portfolio/2DArt/23.png",
-                  "assets/img/portfolio/2DArt/24.png",
-                  "assets/img/portfolio/nft/51.png",
-                  "assets/img/portfolio/nft/52.png",
-                  "assets/img/portfolio/nft/1.png",
-                  "assets/img/portfolio/nft/2.png",
-                  "assets/img/portfolio/nft/3.png",
-                  "assets/img/portfolio/nft/4.png",
-                  "assets/img/portfolio/nft/5.png",
-                  "assets/img/portfolio/nft/6.png",
-                  "assets/img/portfolio/nft/7.png",
-                  "assets/img/portfolio/nft/8.png",
-                  "assets/img/portfolio/nft/9.png",
-                  "assets/img/portfolio/nft/10.png",
-                  "assets/img/portfolio/nft/11.png",
-                  "assets/img/portfolio/nft/13.png",
-                  "assets/img/portfolio/nft/14.png",
-                  "assets/img/portfolio/nft/15.png",
-                  "assets/img/portfolio/nft/16.png",
-                  "assets/img/portfolio/nft/17.png",
-                  "assets/img/portfolio/nft/18.png",
-                  "assets/img/portfolio/nft/19.png",
-                  "assets/img/portfolio/nft/20.png",
-                  "assets/img/portfolio/nft/21.png",
-                  "assets/img/portfolio/nft/22.png",
-                  "assets/img/portfolio/nft/23.png",
-                  "assets/img/portfolio/nft/24.png",
-                  "assets/img/portfolio/nft/25.png",
-                  "assets/img/portfolio/nft/26.png",
-                  "assets/img/portfolio/nft/27.png",
-                  "assets/img/portfolio/nft/28.png",
-                  "assets/img/portfolio/nft/29.png",
-                  "assets/img/portfolio/nft/30.png",
-                  "assets/img/portfolio/nft/31.png",
-                  "assets/img/portfolio/nft/32.png",
-                  "assets/img/portfolio/nft/33.png",
-                  "assets/img/portfolio/nft/34.png",
-                  "assets/img/portfolio/nft/35.png",
-                  "assets/img/portfolio/nft/36.png",
-                  "assets/img/portfolio/nft/37.png",
-                  "assets/img/portfolio/nft/38.png",
-                  "assets/img/portfolio/nft/39.png",
-                  "assets/img/portfolio/nft/40.png",
-                  "assets/img/portfolio/nft/42.png",
-                  "assets/img/portfolio/nft/43.png",
-                  "assets/img/portfolio/nft/44.png",
-                  "assets/img/portfolio/nft/45.png",
-                  "assets/img/portfolio/nft/46.png",
-                  "assets/img/portfolio/nft/47.png",
-                  "assets/img/portfolio/nft/48.png",
-                  "assets/img/portfolio/nft/49.png",
-                  "assets/img/portfolio/nft/50.png",
+              <!-- Portfolio 3D Videosmotion Loop Start -->
+               <script>
+                const videomotion = [
+                  "1_jbbDpy9xfx8zS0vFNE1ULISHDLOSmcH",
+                  "1h7C5uyBoMQ-EmyDqRethuscpd6JC-RyD",
                 ];
 
-                const container = document.currentScript.parentElement;
-                nftImages.forEach(function (src) {
+                const videomotionContainer = document.currentScript.parentElement;
+                const videoModal = document.createElement("div");
+                videoModal.setAttribute("role", "dialog");
+                videoModal.setAttribute("aria-modal", "true");
+                videoModal.setAttribute("aria-label", "Video Motion preview");
+                videoModal.style.cssText =
+                  "box-sizing:border-box; display:none; position:fixed; inset:0; z-index:9999; align-items:center; justify-content:center; padding:clamp(8px,3vw,24px); background:rgba(0,0,0,.9);";
+
+                const drivePreviewContainer = document.createElement("div");
+                drivePreviewContainer.className = "video-motion-preview-frame";
+                drivePreviewContainer.style.cssText =
+                  "position:relative; background:#000;";
+                const drivePreviewFrame = document.createElement("iframe");
+                drivePreviewFrame.title = "Google Drive video preview";
+                drivePreviewFrame.allow = "autoplay; encrypted-media; fullscreen";
+                drivePreviewFrame.allowFullscreen = true;
+                drivePreviewFrame.style.cssText =
+                  "position:absolute; inset:0; width:100%; height:100%; border:0; background:#000;";
+                drivePreviewContainer.appendChild(drivePreviewFrame);
+
+                const closeVideoButton = document.createElement("button");
+                closeVideoButton.type = "button";
+                closeVideoButton.setAttribute("aria-label", "Close video preview");
+                closeVideoButton.innerHTML = '<i class="bi bi-x-lg"></i>';
+                closeVideoButton.style.cssText =
+                  "position:absolute; top:12px; right:12px; z-index:1; width:44px; height:44px; border:0; border-radius:50%; color:#fff; background:rgba(0,0,0,.7); font-size:20px; cursor:pointer;";
+                videoModal.append(closeVideoButton, drivePreviewContainer);
+                document.body.appendChild(videoModal);
+
+                let previouslyFocusedElement = null;
+                const closeVideoPreview = function () {
+                  videoModal.style.display = "none";
+                  drivePreviewFrame.src = "";
+                  document.body.style.overflow = "";
+                  if (previouslyFocusedElement) {
+                    previouslyFocusedElement.focus();
+                  }
+                };
+
+                closeVideoButton.addEventListener("click", closeVideoPreview);
+                videoModal.addEventListener("click", function (event) {
+                  if (event.target === videoModal) {
+                    closeVideoPreview();
+                  }
+                });
+                document.addEventListener("keydown", function (event) {
+                  if (event.key === "Escape" && videoModal.style.display === "flex") {
+                    closeVideoPreview();
+                  }
+                });
+
+                videomotion.forEach(function (fileId, idx) {
+                  const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
                   const col = document.createElement("div");
                   col.className =
                     "col-lg-3 col-md-6 portfolio-item isotope-item filter-app";
                   col.innerHTML = `
                     <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
-                      <img src="${src}" class="img-fluid" alt="" style="aspect-ratio: 1 / 1; object-fit: cover; width: 100%; height: auto; max-width: 330px; max-height: 330px;" />
-                      <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
-                        <a href="${src}" data-gallery="portfolio-gallery-app" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
-                          <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
-                        </a>
-                      </div>
+                      <button type="button" class="video-poster-wrapper d-flex align-items-center justify-content-center" aria-label="Play Video Motion ${idx + 1}" style="position:relative; width:100%; aspect-ratio:16/9; padding:0; border:0; cursor:pointer; background:#111;">
+                        <img src="${thumbnail}" class="img-fluid" alt="Video Motion ${idx + 1}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
+                        <span class="play-btn-overlay d-flex align-items-center justify-content-center" style="position:absolute; width:64px; height:64px; background:rgba(0,0,0,0.65); border-radius:50%; color:white; font-size:2.5rem;">
+                          <i class="bi bi-play-fill"></i>
+                        </span>
+                      </button>
                     </div>
                   `;
-                  container.appendChild(col);
+                  const posterImage = col.querySelector(".video-poster-wrapper img");
+                  posterImage.addEventListener("error", function () {
+                    this.remove();
+                  });
+
+                  col.querySelector(".video-poster-wrapper").addEventListener("click", function () {
+                    previouslyFocusedElement = this;
+                    drivePreviewFrame.src = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
+                    videoModal.style.display = "flex";
+                    document.body.style.overflow = "hidden";
+                    closeVideoButton.focus();
+                  });
+                  videomotionContainer.appendChild(col);
                 });
               </script>
-              <!-- Portfolio NFT Images Loop End -->
+              
+          
+              <!-- Portfolio 3D Videosmotion Loop Start -->
               <!-- End Portfolio Item -->
 
               <script>
-                const onePieceImages = [
-                  "assets/img/portfolio/3dArt/47.png",
-                  "assets/img/portfolio/3dArt/48.png",
-                  "assets/img/portfolio/3dArt/50.png",
-                  "assets/img/portfolio/3dArt/51.png",
-                  "assets/img/portfolio/3dArt/1.png",
-                  "assets/img/portfolio/3dArt/2.png",
-                  "assets/img/portfolio/3dArt/3.png",
-                  "assets/img/portfolio/3dArt/4.png",
-                  "assets/img/portfolio/3dArt/5.png",
-                  "assets/img/portfolio/3dArt/6.png",
-                  "assets/img/portfolio/3dArt/7.png",
-                  "assets/img/portfolio/3dArt/8.png",
-                  "assets/img/portfolio/3dArt/9.png",
-                  "assets/img/portfolio/3dArt/10.png",
-                  "assets/img/portfolio/3dArt/11.png",
-                  "assets/img/portfolio/3dArt/12.png",
-                  "assets/img/portfolio/3dArt/13.png",
-                  "assets/img/portfolio/3dArt/14.png",
-                  "assets/img/portfolio/3dArt/15.png",
-                  "assets/img/portfolio/3dArt/16.png",
-                  "assets/img/portfolio/3dArt/17.png",
-                  "assets/img/portfolio/3dArt/18.png",
-                  "assets/img/portfolio/3dArt/19.png",
-                  "assets/img/portfolio/3dArt/20.png",
-                  "assets/img/portfolio/3dArt/21.png",
-                  "assets/img/portfolio/3dArt/22.png",
-                  "assets/img/portfolio/3dArt/23.png",
-                  "assets/img/portfolio/3dArt/24.png",
-                  "assets/img/portfolio/3dArt/25.png",
-                  "assets/img/portfolio/3dArt/26.png",
-                  "assets/img/portfolio/3dArt/27.png",
-                  "assets/img/portfolio/3dArt/28.png",
-                  "assets/img/portfolio/3dArt/29.png",
-                  "assets/img/portfolio/3dArt/56.png",
-                  "assets/img/portfolio/3dArt/30.png",
-                  "assets/img/portfolio/3dArt/31.png",
-                  "assets/img/portfolio/3dArt/32.png",
-                  "assets/img/portfolio/3dArt/33.png",
-                  "assets/img/portfolio/3dArt/34.png",
-                  "assets/img/portfolio/3dArt/35.png",
-                  "assets/img/portfolio/3dArt/36.png",
-                  "assets/img/portfolio/3dArt/37.png",
-                  "assets/img/portfolio/3dArt/38.png",
-                  "assets/img/portfolio/3dArt/39.png",
-                  "assets/img/portfolio/3dArt/40.png",
-                  "assets/img/portfolio/3dArt/41.png",
-                  "assets/img/portfolio/3dArt/42.png",
-                  "assets/img/portfolio/3dArt/43.png",
-                  "assets/img/portfolio/3dArt/44.png",
-                  "assets/img/portfolio/3dArt/45.png",
-                  "assets/img/portfolio/3dArt/46.png",
-                  "assets/img/portfolio/3dArt/49.png",
-                  "assets/img/portfolio/3dArt/52.png",
-                  "assets/img/portfolio/3dArt/53.png",
-                  "assets/img/portfolio/3dArt/54.png",
-                  "assets/img/portfolio/3dArt/55.png",
-                  "assets/img/portfolio/OnePiece/Luffy.png",
-                  "assets/img/portfolio/OnePiece/Luffy side.png",
-                  "assets/img/portfolio/OnePiece/Zoro.png",
-                  "assets/img/portfolio/OnePiece/Zoro side.png",
-                  "assets/img/portfolio/OnePiece/Nami Front.png",
-                  "assets/img/portfolio/OnePiece/Namid SIde.png",
-                  "assets/img/portfolio/OnePiece/Usopp.png",
-                  "assets/img/portfolio/OnePiece/Usopp side.png",
-                  "assets/img/portfolio/OnePiece/Sanji.png",
-                  "assets/img/portfolio/OnePiece/Sanji side.png",
-                  "assets/img/portfolio/OnePiece/Chopper.png",
-                  "assets/img/portfolio/OnePiece/Chopper side.png",
-                  "assets/img/portfolio/OnePiece/Robin.png",
-                  "assets/img/portfolio/OnePiece/Robin side.png",
-                  "assets/img/portfolio/OnePiece/franky.png",
-                  "assets/img/portfolio/OnePiece/franky side.png",
-                  "assets/img/portfolio/OnePiece/brook.png",
-                  "assets/img/portfolio/OnePiece/brook side.png",
-                  "assets/img/portfolio/OnePiece/Jinbei.png",
-                  "assets/img/portfolio/OnePiece/Jinbei side.png",
-
-                  // Add more image paths as needed
+                const socialmediaposter = [
+                  "15f8OHujoiMdqfZLT6pFn6dTeZeISGttu",
+                  "1UiFlFEEv7nLvqGzpAYgHJPdjsHQNgSw3",
+                  "1NwhcqEresNwQep2nrIOkqD0F5L4FzW5t",
+                  "1gX9vA7SeVTM69aa9Xw6HFoi2Hc7fuz0w",
+                  "186EdUWVP1CY8ZQPzJD6JKi98w_sqI0L_",
+                  "17LWE10FSnG0QhPzF5x1IFBhSA47Pkqy1",
+                  "1fjp6sSyzXBQ6aNKgySoX53x96PsAuo9H",
+                  "1u4ujsAph1Nk2xWB5mjGTUhMmjUhiRRke",
+                  "1Dkx1BC7xZ1k6IoHPL3j-9g9xc_3mOlIk",
+                  "1jotWX0RlDpD4tKWwmfCXprFu8VYUKykv",
+                  "1eM-NGkZCO02AblPpRlpzLQWSwSlm0Jv6",
+                  "1Wbp21ayfJyNaVDMVE1bKnOy21FznmZ-b",
+                  "1Ht0_Su8SHb3iGq9chaRW_nyyHe2Vo5_a",
+                  "1R-_yA-cguDIrzJhYjLZyHvtLtiUWZWQ_",
+                  "1c63wtXwkMlYPIThDGCObp-WDlsPlfdTP",
+                  "1FRSZc4w_CQts33ukD-ztIC_gNpuiyrQ5",
+                  "1Uyktf4v6Bvs3QDpf3E8rVwtssWRVvuy1"
+                                  // Add more Google Drive file IDs here.
                 ];
 
-                const onePieceContainer = document.currentScript.parentElement;
-                onePieceImages.forEach(function (src, idx) {
+                const socialmediaposterContainer = document.currentScript.parentElement;
+                socialmediaposter.forEach(function (fileId, idx) {
+                  const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
                   const col = document.createElement("div");
                   col.className =
                     "col-lg-3 col-md-6 portfolio-item isotope-item filter-product";
                   col.innerHTML = `
                     <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
-                      <img src="${src}" class="img-fluid" alt="One Piece ${
+                      <img src="${thumbnail}" class="img-fluid" alt="Social Media Poster ${
                     idx + 1
                   }" />
                       <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
-                        <a href="${src}" data-gallery="portfolio-gallery-product" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                        <a href="${thumbnail}" data-type="image" data-gallery="portfolio-gallery-product" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
                           <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
                         </a>
                       </div>
                     </div>
                   `;
-                  onePieceContainer.appendChild(col);
+                  socialmediaposterContainer.appendChild(col);
                 });
               </script>
               <!-- End Portfolio Item -->
@@ -612,120 +546,100 @@
                 // Array of video sources for 3D Animation (filter-branding)
                 const brandingVideos = [
                   {
-                    src: "https://drive.google.com/file/d/1Zd7OeY3CXtn-RVYdy_VE-tVufACr7CL2/preview",
-                    poster: "assets/img/portfolio/3danimation/img/logo_1.png",
+                    src: "https://drive.google.com/file/d/1_jbbDpy9xfx8zS0vFNE1ULISHDLOSmcH/preview",
                     title: "Mr & Ms CCS 2023 Logo Animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1PPF_lukDUbAUDmIDUi63GLSsU_FkoSb0/preview",
-                    poster: "assets/img/portfolio/3danimation/img/logo_2.png",
                     title: "CCS Department Logo Animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1Hc3yVkBQqomOx29OkunVjRBW889wK5YB/preview",
-                    poster: "assets/img/portfolio/3danimation/img/logo_3.png",
                     title: "NANSUI Logo Animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1j3NBUgurLKjPpukUhXc126PUgskwCfU3/preview",
-                    poster: "assets/img/portfolio/3danimation/img/logoilo.png",
                     title: "Iloilo PSABE Logo Animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/14OvId1yQPbWE_VLvKxB4hX0WbL9i9Q8G/preview",
-                    poster:
-                      "assets/img/portfolio/3danimation/img/intro_iloilo.png",
                     title: "Iloilo PSABE Intro animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1qXW3E0xdGJ0aKdqLyxKrcg3tr6bJjMFh/preview",
-                    poster:
-                      "assets/img/portfolio/3danimation/img/moonknight.png",
                     title: "Moonknight Animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1ai2TsRB_ItAUvD_xT0wSneYcq5erL1rx/preview",
-                    poster: "assets/img/portfolio/3danimation/img/intro.png",
                     title: "Fine Line Films Intro animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1YJJjOs-R3I4FFMiCET_PwDb5_CErL6Kt/preview",
-                    poster: "assets/img/portfolio/3danimation/img/plastics.png",
                     title: "Plastics Bag Product animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1N6n3aFRZHxy5z4ONOpeRGrDztoiL-TXj/preview",
-                    poster: "assets/img/portfolio/3danimation/img/tiles.png",
                     title: "Floor tiles product Animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1pATIvJutm0LWfHQJWMofVbU3-Hx5-Seg/preview",
-                    poster: "assets/img/portfolio/3danimation/img/running.png",
                     title: "Running to the wild animation",
                   },
 
                   {
                     src: "https://drive.google.com/file/d/1ZIGWUF003fr37-XwKtINJIbTu7vHu39G/preview",
-                    poster: "assets/img/portfolio/3danimation/img/cup.png",
                     title: "Cup Dancing animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1d3VG6YowtHohc1_ztsa2OsodTvrYA5eX/preview",
-                    poster: "assets/img/portfolio/3danimation/img/fan.png",
                     title: "Electric Thesis animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1dPeajzdF-iqRNQusdZuDX9fIc7WXtHY3/preview",
-                    poster: "assets/img/portfolio/3danimation/img/thermo.png",
                     title: "Thermoelectric Thesis animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1JQKwp5a4q_k8ZF1fHwqV5FLYoDBualm8/preview",
-                    poster: "assets/img/portfolio/3danimation/img/wind.png",
                     title: "Wind Turbine Thesis animation",
                   },
 
                   {
                     src: "https://drive.google.com/file/d/1Sw7KS0Pqiqi0yuvAj8XpDH17XZy4XXtT/preview",
-                    poster: "assets/img/portfolio/3danimation/img/run.png",
                     title: "Grass run hiding animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1DRDY7JiSok29Ji4sitfDSGdFiG3857rw/preview",
-                    poster: "assets/img/portfolio/3danimation/img/square.png",
                     title: "Cube character animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1sxEmbOOYafbrf8UOPTZrzqLc3nv2-vMa/preview",
-                    poster: "assets/img/portfolio/3danimation/img/flickg.png",
                     title: "Flick G gang contest animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1ve5w-JeoCvP9lyWEMqIm2Lb2nYcypHL_/preview",
-                    poster: "assets/img/portfolio/3danimation/img/airplane.png",
                     title: "Albay to Iloilo PSABE animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/1YgiVvTV52G2Mejnkz9GpAepGxurrTY8l/preview",
-                    poster: "assets/img/portfolio/3danimation/img/loop.png",
                     title: "Iloilo PSABE Loop animation",
                   },
                   {
                     src: "https://drive.google.com/file/d/17Eoi-MX1QNJBMY_KlqA_wRiXiYQ1JSZM/preview",
-                    poster: "assets/img/portfolio/3danimation/img/tour.png",
                     title: "Pila Museum Virtual Tour for Mobile Application",
                   },
                 ];
 
                 const brandingContainer = document.currentScript.parentElement;
                 brandingVideos.forEach(function (video) {
+                  const fileId = video.src.match(/\/d\/([^/]+)/)[1];
+                  const poster = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
                   const col = document.createElement("div");
                   col.className =
                     "col-lg-4 col-md-6 portfolio-item isotope-item filter-branding";
                   col.innerHTML = `
     <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
       <div class="video-poster-wrapper" tabindex="0" style="position:relative; width:100%; cursor:pointer; outline:none;">
-        <img src="${video.poster}" alt="${
+        <img src="${poster}" alt="${
                     video.title
                   }" class="img-fluid" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <a class="play-btn-overlay d-flex align-items-center justify-content-center"

@@ -820,6 +820,19 @@ section,
   }
 }
 
+.video-motion-preview-frame {
+  width: min(92vw, 142vh, 1200px);
+  aspect-ratio: 16 / 9;
+  max-height: 80vh;
+}
+
+@media (max-width: 767px) {
+  .video-motion-preview-frame {
+    width: min(92vw, calc(80vh * 9 / 16));
+    aspect-ratio: 9 / 16;
+  }
+}
+
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
