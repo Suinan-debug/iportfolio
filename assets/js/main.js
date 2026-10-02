@@ -121,10 +121,26 @@
     ];
     const facePath = 'assets/img/Face/';
 
-    faceViews.flat().forEach((view) => {
-      const image = new Image();
-      image.src = `${facePath}${view}`;
-    });
+    const preloadFaceViews = () => {
+      faceViews.flat().filter((view) => view !== 'Front.png').forEach((view) => {
+        const image = new Image();
+        image.src = `${facePath}${view}`;
+      });
+    };
+
+    const scheduleFacePreload = () => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(preloadFaceViews, { timeout: 2500 });
+      } else {
+        window.setTimeout(preloadFaceViews, 1200);
+      }
+    };
+
+    if (document.readyState === 'complete') {
+      scheduleFacePreload();
+    } else {
+      window.addEventListener('load', scheduleFacePreload, { once: true });
+    }
 
     const handleHeroPointerMove = (event) => {
       const px = Math.max(0, Math.min(0.999, event.clientX / window.innerWidth));
@@ -338,14 +354,25 @@
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
+    const isotopeContainer = isotopeItem.querySelector('.isotope-container');
+    let layoutFrame = 0;
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
+    const relayoutAfterImageLoad = function(event) {
+      if (event.target.tagName !== 'IMG') return;
+      window.cancelAnimationFrame(layoutFrame);
+      layoutFrame = window.requestAnimationFrame(function() {
+        initIsotope.layout();
+        layoutFrame = 0;
       });
+    };
+
+    isotopeContainer.addEventListener('load', relayoutAfterImageLoad, true);
+    isotopeContainer.addEventListener('error', relayoutAfterImageLoad, true);
+    initIsotope = new Isotope(isotopeContainer, {
+      itemSelector: '.isotope-item',
+      layoutMode: layout,
+      filter: filter,
+      sortBy: sort
     });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
