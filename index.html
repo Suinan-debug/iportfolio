@@ -1,646 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Vince Suinan - iPortfolio 3D Graphic Artist</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
 
-    <!-- Favicons -->
-    <link href="assets/img/AOV LOGO.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Vince Suinan - iPortfolio 3D Graphic Artist</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicons -->
+  <link href="assets/img/AOV LOGO.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
-  </head>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <body class="index-page">
-    <header id="header" class="header dark-background d-flex flex-column">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
 
-      <div class="profile-img">
-        <img
-          src="assets/img/1746691755263.jpg"
-          alt=""
-          class="img-fluid rounded-circle"
-        />
+<body class="index-page">
+  <header id="header" class="header dark-background">
+    <a href="#hero" class="mobile-brand" aria-label="Vince home">
+      <img src="assets/img/AOV LOGO.png" alt="Vince logo" />
+    </a>
+
+    <button class="header-toggle" type="button" aria-expanded="false" aria-controls="navmenu"
+      aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="navmenu" class="navmenu" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">Work Experience</a></li>
+        <!-- <li><a href="#customers">Customers</a></li> -->
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div class="hero-shell" data-aos="fade-up" data-aos-delay="100">
+        <canvas class="hero-network" aria-hidden="true"></canvas>
+        <div class="hero-content hero-center-stack">
+          <div class="hero-copy hero-copy-main">
+            <h1>HI, I'M <span>VINCE</span></h1>
+          </div>
+
+          <div class="hero-midline">
+            <div class="hero-side-text hero-side-text-left">
+              A 3D designer passionate about<br />
+              crafting bold, immersive, and<br />
+              memorable projects.
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="hero-portrait">
+                <img class="portrait-image" src="assets/img/Face/Front.png" alt="" draggable="false" />
+              </div>
+            </div>
+
+            <div class="hero-side-text hero-side-text-right">
+              3D Graphics<br />
+              3D Animation<br />
+              Video Edits<br />
+              Motion Graphics
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="stats section dark-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="logo-marquee" aria-label="Skills marquee">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <div class="logo-pill"><img src="assets/img/blender.png" alt="Blender" /><span>Blender</span></div>
+              <div class="logo-pill"><img src="assets/img/aeicon.png" alt="After Effects" /><span>After Effects</span>
+              </div>
+              <div class="logo-pill"><img src="assets/img/psicon.png" alt="Photoshop" /><span>Photoshop</span></div>
+              <div class="logo-pill"><img src="assets/img/anicon.png" alt="Animate" /><span>Animate</span></div>
+              <div class="logo-pill"><img src="assets/img/notionicon.png" alt="Notion" /><span>Notion</span></div>
+              <div class="logo-pill"><img src="assets/img/sketchbooklogo.png" alt="Sketchbook" /><span>Sketchbook</span>
+              </div>
+              <div class="logo-pill"><img src="assets/img/figma-icon-2048x2048-lvgft610.png"
+                  alt="Figma" /><span>Figma</span></div>
+              <div class="logo-pill"><img src="assets/img/Vector.png" alt="Canva" /><span>Canva</span></div>
+              <div class="logo-pill"><img src="assets/img/vscodelogo.png" alt="VS Code" /><span>VS Code</span></div>
+              <div class="logo-pill"><img src="assets/img/Group 1.png" alt="CapCut" /><span>CapCut</span></div>
+              <div class="logo-pill"><img src="assets/img/msofficelogo.png" alt="MS Office" /><span>MS Office</span>
+              </div>
+              <div class="logo-pill"><img src="assets/img/untiylogo.png" alt="Unity" /><span>Unity</span></div>
+
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+              <div class="logo-pill"><img src="assets/img/blender.png" alt="Blender" /><span>Blender</span></div>
+              <div class="logo-pill"><img src="assets/img/aeicon.png" alt="After Effects" /><span>After Effects</span>
+              </div>
+              <div class="logo-pill"><img src="assets/img/psicon.png" alt="Photoshop" /><span>Photoshop</span></div>
+              <div class="logo-pill"><img src="assets/img/anicon.png" alt="Animate" /><span>Animate</span></div>
+              <div class="logo-pill"><img src="assets/img/notionicon.png" alt="Notion" /><span>Notion</span></div>
+              <div class="logo-pill"><img src="assets/img/sketchbooklogo.png" alt="Sketchbook" /><span>Sketchbook</span>
+              </div>
+              <div class="logo-pill"><img src="assets/img/figma-icon-2048x2048-lvgft610.png"
+                  alt="Figma" /><span>Figma</span></div>
+              <div class="logo-pill"><img src="assets/img/Vector.png" alt="Canva" /><span>Canva</span></div>
+              <div class="logo-pill"><img src="assets/img/vscodelogo.png" alt="VS Code" /><span>VS Code</span></div>
+              <div class="logo-pill"><img src="assets/img/Group 1.png" alt="CapCut" /><span>CapCut</span></div>
+              <div class="logo-pill"><img src="assets/img/msofficelogo.png" alt="MS Office" /><span>MS Office</span>
+              </div>
+              <div class="logo-pill"><img src="assets/img/untiylogo.png" alt="Unity" /><span>Unity</span></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Skills Section -->
+
+    <!-- Work Experience Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up" style="padding-top: 40px;">
+        <h2>Work Experience</h2>
+        <!-- <p>
+          IT Intern / Full Stack Developer with hands-on experience in system
+          support, technical setup, and software development for academic and
+          institutional platforms.
+        </p> -->
       </div>
 
-      <a
-        href="index.html"
-        class="logo d-flex align-items-center justify-content-center"
-      >
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Vince Suinan</h1>
-      </a>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/VINCE.jpg" class="img-fluid" alt="Vince Lawrence Suinan" />
+          </div>
 
-      <div class="social-links text-center">
-        <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
-        <a href="https://www.facebook.com/vince.suinan.30/" class="facebook"
-          ><i class="bi bi-facebook"></i
-        ></a>
-        <a href="https://www.instagram.com/artsofvince/" class="instagram"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
-      </div>
+          <div class="col-lg-8 content">
+            <h1><b>Graphic Artist</b></h1>
+            <p class="fst-italic py-3">
+              <b>Mediacast Digital Group Inc.</b> <br />
+              65 M.H. Del Pila St, Quezon City, Metro Manila <br>
+              <span><i>July 2025 - Present</i></span>
+            </p>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i>Home</a
-            >
-          </li>
-          <li>
-            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
-          </li>
-          <li>
-            <a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a>
-          </li>
-          <li>
-            <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
-            >
-          </li>
-          <li>
-            <a href="#portfolio"
-              ><i class="bi bi-images navicon"></i> Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i> Services</a
-            >
-          </li>
-          <!-- <li class="dropdown">
-            <a href="#"
-              ><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i
-            ></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown">
-                <a href="#"
-                  ><span>Deep Dropdown</span>
-                  <i class="bi bi-chevron-down toggle-dropdown"></i
-                ></a>
+            <div class="row">
+              <div class="col-lg-12">
                 <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Created 3D architectural visualizations and mockups in collaboration with sales and
+                      engineering department to help clients visualize digital signage and displays within
+                      their existing spaces.
+                    </span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Produced Dynamic/Static 3D product animations and Layout optimized for high-impact digital
+                      advertising and social media engagement with brand consistency</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Handled content animation and pricing updates for select Manila McDonald’s stores
+                      using After effects and HTML, XML, and .SWF files for price adjustments</span>
+                  </li>
                 </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
-        <img src="assets/img/ss.png" alt="" data-aos="fade-in" class="" />
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h2>Vince Lawrence Suinan</h2>
-          <p>
-            I'm
-            <span
-              class="typed"
-              data-typed-items="2D Artist, 3D Artist, Freelancer, 3D Animation,"
-              >Artist</span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span>
-          </p>
-        </div>
-      </section>
-      <!-- /Hero Section -->
-      <!-- About Section -->
-      <section id="about" class="about section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>About</h2>
-          <p>
-            Greetings! I' m Vince Lawrence Suinan, Skilled 3D Artist & Digital
-            Illustrator with a track record of delivering high-quality work. I
-            am a fast learner, a strong team player, and always eager to explore
-            new techniques and software."
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4">
-              <img
-                src="assets/img/1746691755263.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="col-lg-8 content">
-              <h2>2D and 3D &amp; Artist.</h2>
-              <p class="fst-italic py-3">
-                Motivated IT student with a strong foundation in web and mobile
-                development, and a passion for digital art. Experienced in
-                front-end and back-end technologies. Creative and
-                detail-oriented, with a background in both programming and 2D/3D
-                digital design.
-              </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Birthday:</strong> <span>30 September 2003</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Phone:</strong> <span>+639940365220</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Address:</strong>
-                      <span>Brgy. Pansol Pila, Laguna</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
-                      <span>22</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Course:</strong>
-                      <span>Bachelor of Science in Information Technology</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong>
-                      <span>suinanlawrence8@gmail.com</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Freelance:</strong> <span>Available</span>
-                    </li>
-                  </ul>
-                </div>
               </div>
-              <!-- <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-            </p> -->
             </div>
           </div>
-        </div>
-      </section>
-      <!-- /About Section -->
-      <section id="skills" class="stats section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
-        </div>
-        <!-- End Section Title -->
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/blender.png"
-                  alt="Blender Software"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Blender Software</strong>
-              </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/sketchbooklogo.png"
-                  alt="Autodesk Sketchbook"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Autodesk Sketchbook</strong>
-              </div>
-            </div>
+           <div class="col-lg-4">
+            <!-- <img src="assets/img/VINCE.jpg" class="img-fluid" alt="Vince Lawrence Suinan" /> -->
+          </div>
+          <div class="col-lg-8 content">
+            <h2>IT Intern / Full Stack Developer</h2>
+            <p class="fst-italic py-3">
+              Patts College of Aeronautics, Inc. <br />
+              <span>Feb - May 2025</span>
+            </p>
 
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/figma-icon-2048x2048-lvgft610.png"
-                  alt="Figma"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Figma</strong>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/Vector.png"
-                  alt="Canva"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Canva</strong>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/vscodelogo.png"
-                  alt="VS Code"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Visual Studio Code</strong>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/Group 1.png"
-                  alt="Capcut"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Capcut</strong>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/msofficelogo.png"
-                  alt="MS Office"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">MS Office</strong>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex justify-content-center">
-              <div
-                class="stats-item d-flex flex-column align-items-center text-center"
-              >
-                <img
-                  src="assets/img/untiylogo.png"
-                  alt="Unity"
-                  style="height: 90px"
-                />
-                <strong class="mt-2">Unity</strong>
+            <div class="row">
+              <div class="col-lg-12">
+                <ul>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Assisted in system unit assembly, LAN cabling, and testing hardware components.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Managed project responsibilities, handled email communications, and supported technical
+                      setups.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <span>Participated in the development and enhancement of the PATTS Admission and PES-API systems as
+                      a software developer.</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- /Skills Section -->
-      <!-- Resume Section -->
-      <section id="resume" class="resume section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
-        </div>
-        <div style="display: flex; justify-content: center">
-          <iframe
-            src="assets/resume.pdf"
-            type="application/pdf"
-            width="50%"
-            height="900px"
-            allowfullscreen
-            style="border: none"
-          ></iframe>
-        </div>
-      </section>
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section light-background">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>
-            A showcase of my creative work in 2D illustration, 3D modeling, and
-            game design. Includes commissioned art, pixel assets, 3D projects,
-            and mobile app design—highlighting my versatility as a digital
-            artist and developer.
-          </p>
-        </div>
-        <!-- End Section Title -->
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">3D Video Motion</li>
-              <li data-filter=".filter-product">Social Media Posters</li>
-              <li data-filter=".filter-branding">3D Animation</li>
-              <li data-filter=".filter-books">Game Assets</li>
-            </ul>
-            <!-- End Portfolio Filters -->
+      </div>
+    </section>
+    <!-- /Work Experience Section -->
 
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <!-- Portfolio 3D Videosmotion Loop Start -->
-               <script>
-                const videomotion = [
-                  "1_jbbDpy9xfx8zS0vFNE1ULISHDLOSmcH",
-                  "1h7C5uyBoMQ-EmyDqRethuscpd6JC-RyD",
-                ];
+    <!-- Resume Section -->
+    <!-- <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <iframe src="assets/resume.pdf" type="application/pdf" width="50%" height="900px" allowfullscreen
+          style="border: none"></iframe>
+      </div>
+    </section> -->
+    <!-- End Resume Section -->
 
-                const videomotionContainer = document.currentScript.parentElement;
-                const videoModal = document.createElement("div");
-                videoModal.setAttribute("role", "dialog");
-                videoModal.setAttribute("aria-modal", "true");
-                videoModal.setAttribute("aria-label", "Video Motion preview");
-                videoModal.style.cssText =
-                  "box-sizing:border-box; display:none; position:fixed; inset:0; z-index:9999; align-items:center; justify-content:center; padding:clamp(8px,3vw,24px); background:rgba(0,0,0,.9);";
 
-                const drivePreviewContainer = document.createElement("div");
-                drivePreviewContainer.className = "video-motion-preview-frame";
-                drivePreviewContainer.style.cssText =
-                  "position:relative; background:#000;";
-                const drivePreviewFrame = document.createElement("iframe");
-                drivePreviewFrame.title = "Google Drive video preview";
-                drivePreviewFrame.allow = "autoplay; encrypted-media; fullscreen";
-                drivePreviewFrame.allowFullscreen = true;
-                drivePreviewFrame.style.cssText =
-                  "position:absolute; inset:0; width:100%; height:100%; border:0; background:#000;";
-                drivePreviewContainer.appendChild(drivePreviewFrame);
 
-                const closeVideoButton = document.createElement("button");
-                closeVideoButton.type = "button";
-                closeVideoButton.setAttribute("aria-label", "Close video preview");
-                closeVideoButton.innerHTML = '<i class="bi bi-x-lg"></i>';
-                closeVideoButton.style.cssText =
-                  "position:absolute; top:12px; right:12px; z-index:1; width:44px; height:44px; border:0; border-radius:50%; color:#fff; background:rgba(0,0,0,.7); font-size:20px; cursor:pointer;";
-                videoModal.append(closeVideoButton, drivePreviewContainer);
-                document.body.appendChild(videoModal);
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section dark-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" style="padding-top: 20px;">
+        <h2>Portfolio</h2>
+        <p>
+          Graphic & 3D Artist specializing in 3D Motion Animation, 3D Modeling, Game Assets, Social Media Visuals, and
+          2D Digital Art. Crafting high-quality visual experiences from concept to final render. Available forx
+          freelance, studio, and brand collaborations.
+        </p>
+      </div>
+      <!-- End Section Title -->
+      <div class="container">
+        <div class="isotope-layout showcase-active" data-default-filter="*" data-layout="masonry"
+          data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" aria-label="Portfolio categories" data-aos="fade-up"
+            data-aos-delay="100">
+            <li data-filter="*" class="filter-active"><button type="button" aria-pressed="true">All</button></li>
+            <li data-filter=".filter-app"><button type="button" aria-pressed="false">3D Video Animation/Motion
+                Graphics</button></li>
+            <li data-filter=".filter-product"><button type="button" aria-pressed="false">Social Media Posters</button>
+            </li>
+            <li data-filter=".filter-model"><button type="button" aria-pressed="false">3D Model</button></li>
+            <li data-filter=".filter-digitalart"><button type="button" aria-pressed="false">Digital Art</button></li>
+            <li data-filter=".filter-books"><button type="button" aria-pressed="false">Game Assets</button></li>
+          </ul>
+          <!-- End Portfolio Filters -->
 
-                let previouslyFocusedElement = null;
-                const closeVideoPreview = function () {
-                  videoModal.style.display = "none";
-                  drivePreviewFrame.src = "";
-                  document.body.style.overflow = "";
-                  if (previouslyFocusedElement) {
-                    previouslyFocusedElement.focus();
-                  }
+          <section class="portfolio-showcase" aria-labelledby="portfolio-showcase-title">
+            <h3 id="portfolio-showcase-title">A place to display your<br />masterpiece.</h3>
+            <div class="portfolio-showcase-deck" role="region" aria-label="Featured portfolio artwork" tabindex="0">
+            </div>
+            <p class="portfolio-showcase-caption">A selection of digital art, posters, 3D models, and game assets.</p>
+            <!-- <div class="portfolio-showcase-controls" aria-label="Carousel controls">
+              <button class="portfolio-showcase-prev" type="button" aria-label="Scroll artwork backward"
+                aria-pressed="false">
+                <i class="bi bi-arrow-left" aria-hidden="true"></i>
+              </button>
+              <span class="portfolio-showcase-status" aria-live="off">Continuous scroll</span>
+              <button class="portfolio-showcase-next" type="button" aria-label="Scroll artwork forward"
+                aria-pressed="true">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div> -->
+          </section>
+
+          <div class="row gy-4 isotope-container portfolio-grid" aria-hidden="true" data-aos="fade-up"
+            data-aos-delay="200">
+
+            <!-- Portfolio 3D Videosmotion Loop Start -->
+            <script>
+              const videomotion = [
+                { fileId: "1_jbbDpy9xfx8zS0vFNE1ULISHDLOSmcH", orientation: "portrait" },
+                { fileId: "1h7C5uyBoMQ-EmyDqRethuscpd6JC-RyD", orientation: "portrait" },
+                { fileId: "11ZdcG346FcJy5i7t0-39Izj0t-Pxfz4h", orientation: "portrait" },
+                { fileId: "1BHrdJbhyYBBBys-qk9KTeOUOJ0WBdCk_", orientation: "portrait" },
+                { fileId: "12QxN8NzIM6j7_-F__7CxhQ7JTc7Gwmj1", orientation: "portrait" },
+                { fileId: "1Qw5nkSOY13MZ3VECagyvxKrNIrKZIVoi", orientation: "portrait" },
+                { fileId: "1tNGN2MWxX7IlZXTh_nsj2k1h_r4Va_cV", orientation: "portrait" },
+                { fileId: "1mwoQoZXCfWN8iKtZn_PWd6lLmWAUX7J1", orientation: "portrait" },
+                { fileId: "1BN3EFIl9hsIu9_HIIbG-YD92J9_404a1", orientation: "landscape" },
+                { fileId: "1Rqg4v8JS6qJhUzyDzIZa51hss2hmCw8e", orientation: "landscape" },
+                { fileId: "1j3NBUgurLKjPpukUhXc126PUgskwCfU3", orientation: "landscape" },
+                { fileId: "1ojUDoDyp3Pynr8G9i9R8G9kmKkIxF75p", orientation: "landscape" },
+                { fileId: "1Uh1CZqTnqa35LuCjptprUUMThYp3sdNC", orientation: "landscape" },
+                { fileId: "15Qg1Cqj1X8u00-xKV2vdZDRDskdYjr1F", orientation: "portrait" },
+                { fileId: "1a1ut-Wb0WJNiYGyBpmkeDe_jCS4JcWe4", orientation: "portrait" },
+                { fileId: "1BxVlqYIMw1OnqzyD6GcNHVX-q7va4KQT", orientation: "portrait" },
+                { fileId: "1NIwSYFqCbUfEO550Y9gTKTfcEmXJq2hf", orientation: "portrait" },
+                { fileId: "1m4LZoN0kyfZ-u_XVPEDmvANMeKpIxij6", orientation: "portrait" },
+                { fileId: "1vEAqJfCbJAPxnXK68t8-_8xvNcmw5ufx", orientation: "portrait" },
+                { fileId: "1O4dQYROGCbykOVDaRCr6Opgzb7OVUUbQ", orientation: "landscape" },
+                { fileId: "1Ww0WWMnu1b06q0QbMP6-Cl4yAhK8Objs", orientation: "portrait" },
+                { fileId: "1FQSGFVojC2MXhYNMrMFql2LrgQe6mhvw", orientation: "portrait" },
+                { fileId: "11maHljzepN0bO44OaJOT5ekNazf0yjnS", orientation: "portrait" },
+                { fileId: "1qwAFJqx_0vaCFSWkUWWdRBXCI5jTAyjR", orientation: "portrait" },
+                { fileId: "1TGthv1qNYEeSsxPNINcO7fRiMrgPcfck", orientation: "portrait" },
+
+
+              ];
+
+              const videomotionContainer = document.currentScript.parentElement;
+              const videoModal = document.createElement("div");
+              videoModal.setAttribute("role", "dialog");
+              videoModal.setAttribute("aria-modal", "true");
+              videoModal.setAttribute("aria-label", "Video Motion preview");
+              videoModal.style.cssText =
+                "box-sizing:border-box; display:none; position:fixed; inset:0; z-index:9999; align-items:center; justify-content:center; padding:clamp(8px,3vw,24px); background:rgba(0,0,0,.9);";
+
+              const drivePreviewContainer = document.createElement("div");
+              drivePreviewContainer.className = "video-motion-preview-frame";
+              drivePreviewContainer.style.cssText = "position:relative; background:#000;";
+              const drivePreviewFrame = document.createElement("iframe");
+              drivePreviewFrame.title = "Google Drive video preview";
+              drivePreviewFrame.allow = "autoplay; encrypted-media; fullscreen";
+              drivePreviewFrame.allowFullscreen = true;
+              drivePreviewFrame.style.cssText =
+                "position:absolute; inset:0; width:100%; height:100%; border:0; background:#000;";
+              drivePreviewContainer.appendChild(drivePreviewFrame);
+
+              const closeVideoButton = document.createElement("button");
+              closeVideoButton.type = "button";
+              closeVideoButton.setAttribute("aria-label", "Close video preview");
+              closeVideoButton.innerHTML = '<i class="bi bi-x-lg"></i>';
+              closeVideoButton.style.cssText =
+                "position:absolute; top:12px; right:12px; z-index:1; width:44px; height:44px; border:0; border-radius:50%; color:#fff; background:rgba(0,0,0,.7); font-size:20px; cursor:pointer;";
+              videoModal.append(closeVideoButton, drivePreviewContainer);
+              document.body.appendChild(videoModal);
+
+              let previouslyFocusedElement = null;
+              const closeVideoPreview = function () {
+                videoModal.style.display = "none";
+                drivePreviewFrame.src = "";
+                document.body.style.overflow = "";
+                if (previouslyFocusedElement) previouslyFocusedElement.focus();
+              };
+
+              closeVideoButton.addEventListener("click", closeVideoPreview);
+              videoModal.addEventListener("click", function (event) {
+                if (event.target === videoModal) closeVideoPreview();
+              });
+              document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape" && videoModal.style.display === "flex") closeVideoPreview();
+              });
+
+              videomotion.forEach(function (videoEntry, idx) {
+                const fileId = typeof videoEntry === "string" ? videoEntry : videoEntry.fileId;
+                const orientation = typeof videoEntry === "string" ? "landscape" : (videoEntry.orientation || "landscape");
+                const thumbnailRatio = orientation === "portrait" ? "9 / 16" : "16 / 9";
+                const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
+                const col = document.createElement("div");
+                col.className = "col-lg-3 col-md-6 portfolio-item isotope-item filter-app";
+                col.innerHTML = `
+                  <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
+                    <button type="button" class="video-poster-wrapper d-flex align-items-center justify-content-center" aria-label="Play Video Motion ${idx + 1}" style="position:relative; width:100%; aspect-ratio:${thumbnailRatio}; padding:0; border:0; cursor:pointer; background:#111; overflow:hidden;">
+                      <img src="${thumbnail}" class="img-fluid" alt="Video Motion ${idx + 1}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;" />
+                      <iframe title="Video Motion ${idx + 1} preview" allow="autoplay; encrypted-media" style="position:absolute; inset:0; width:100%; height:100%; border:0; opacity:0; pointer-events:none; transition:opacity .2s ease;"></iframe>
+                      <span class="play-btn-overlay d-flex align-items-center justify-content-center" style="position:absolute; width:64px; height:64px; background:rgba(0,0,0,0.65); border-radius:50%; color:white; font-size:2.5rem;">
+                        <i class="bi bi-play-fill"></i>
+                      </span>
+                    </button>
+                  </div>
+                `;
+                const posterImage = col.querySelector(".video-poster-wrapper img");
+                posterImage.addEventListener("error", function () { this.remove(); });
+                const posterButton = col.querySelector(".video-poster-wrapper");
+                const hoverPreviewFrame = posterButton.querySelector("iframe");
+                const playOverlay = posterButton.querySelector(".play-btn-overlay");
+                const stopHoverPreview = function () {
+                  hoverPreviewFrame.src = "";
+                  hoverPreviewFrame.style.opacity = "0";
+                  posterImage.style.opacity = "1";
+                  playOverlay.style.opacity = "1";
                 };
 
-                closeVideoButton.addEventListener("click", closeVideoPreview);
-                videoModal.addEventListener("click", function (event) {
-                  if (event.target === videoModal) {
-                    closeVideoPreview();
-                  }
+                posterButton.addEventListener("pointerenter", function (event) {
+                  if (event.pointerType === "touch") return;
+                  hoverPreviewFrame.src = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
+                  hoverPreviewFrame.style.opacity = "1";
+                  posterImage.style.opacity = "0";
+                  playOverlay.style.opacity = "0";
                 });
-                document.addEventListener("keydown", function (event) {
-                  if (event.key === "Escape" && videoModal.style.display === "flex") {
-                    closeVideoPreview();
-                  }
+                posterButton.addEventListener("pointerleave", stopHoverPreview);
+                posterButton.addEventListener("click", function () {
+                  stopHoverPreview();
+                  previouslyFocusedElement = this;
+                  drivePreviewFrame.src = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
+                  videoModal.style.display = "flex";
+                  document.body.style.overflow = "hidden";
+                  closeVideoButton.focus();
                 });
+                videomotionContainer.appendChild(col);
+              });
+            </script>
+            <!-- Portfolio 3D Videosmotion Loop Start -->
 
-                videomotion.forEach(function (fileId, idx) {
-                  const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
-                  const col = document.createElement("div");
-                  col.className =
-                    "col-lg-3 col-md-6 portfolio-item isotope-item filter-app";
-                  col.innerHTML = `
-                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
-                      <button type="button" class="video-poster-wrapper d-flex align-items-center justify-content-center" aria-label="Play Video Motion ${idx + 1}" style="position:relative; width:100%; aspect-ratio:16/9; padding:0; border:0; cursor:pointer; background:#111;">
-                        <img src="${thumbnail}" class="img-fluid" alt="Video Motion ${idx + 1}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
-                        <span class="play-btn-overlay d-flex align-items-center justify-content-center" style="position:absolute; width:64px; height:64px; background:rgba(0,0,0,0.65); border-radius:50%; color:white; font-size:2.5rem;">
-                          <i class="bi bi-play-fill"></i>
-                        </span>
-                      </button>
-                    </div>
-                  `;
-                  const posterImage = col.querySelector(".video-poster-wrapper img");
-                  posterImage.addEventListener("error", function () {
-                    this.remove();
-                  });
 
-                  col.querySelector(".video-poster-wrapper").addEventListener("click", function () {
-                    previouslyFocusedElement = this;
-                    drivePreviewFrame.src = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
-                    videoModal.style.display = "flex";
-                    document.body.style.overflow = "hidden";
-                    closeVideoButton.focus();
-                  });
-                  videomotionContainer.appendChild(col);
-                });
-              </script>
-              
-          
-              <!-- Portfolio 3D Videosmotion Loop Start -->
-              <!-- End Portfolio Item -->
+            <!-- End Portfolio Item -->
 
-              <script>
-                const socialmediaposter = [
-                  "15f8OHujoiMdqfZLT6pFn6dTeZeISGttu",
-                  "1UiFlFEEv7nLvqGzpAYgHJPdjsHQNgSw3",
-                  "1NwhcqEresNwQep2nrIOkqD0F5L4FzW5t",
-                  "1gX9vA7SeVTM69aa9Xw6HFoi2Hc7fuz0w",
-                  "186EdUWVP1CY8ZQPzJD6JKi98w_sqI0L_",
-                  "17LWE10FSnG0QhPzF5x1IFBhSA47Pkqy1",
-                  "1fjp6sSyzXBQ6aNKgySoX53x96PsAuo9H",
-                  "1u4ujsAph1Nk2xWB5mjGTUhMmjUhiRRke",
-                  "1Dkx1BC7xZ1k6IoHPL3j-9g9xc_3mOlIk",
-                  "1jotWX0RlDpD4tKWwmfCXprFu8VYUKykv",
-                  "1eM-NGkZCO02AblPpRlpzLQWSwSlm0Jv6",
-                  "1Wbp21ayfJyNaVDMVE1bKnOy21FznmZ-b",
-                  "1Ht0_Su8SHb3iGq9chaRW_nyyHe2Vo5_a",
-                  "1R-_yA-cguDIrzJhYjLZyHvtLtiUWZWQ_",
-                  "1c63wtXwkMlYPIThDGCObp-WDlsPlfdTP",
-                  "1FRSZc4w_CQts33ukD-ztIC_gNpuiyrQ5",
-                  "1Uyktf4v6Bvs3QDpf3E8rVwtssWRVvuy1"
-                                  // Add more Google Drive file IDs here.
-                ];
 
-                const socialmediaposterContainer = document.currentScript.parentElement;
-                socialmediaposter.forEach(function (fileId, idx) {
-                  const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
-                  const col = document.createElement("div");
-                  col.className =
-                    "col-lg-3 col-md-6 portfolio-item isotope-item filter-product";
-                  col.innerHTML = `
-                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
-                      <img src="${thumbnail}" class="img-fluid" alt="Social Media Poster ${
-                    idx + 1
+            <!-- Social Media Posters -->
+            <script>
+              const socialMediaPosters = [
+                "15f8OHujoiMdqfZLT6pFn6dTeZeISGttu",
+                "1UiFlFEEv7nLvqGzpAYgHJPdjsHQNgSw3",
+                "1NwhcqEresNwQep2nrIOkqD0F5L4FzW5t",
+                "1gX9vA7SeVTM69aa9Xw6HFoi2Hc7fuz0w",
+                "186EdUWVP1CY8ZQPzJD6JKi98w_sqI0L_",
+                "17LWE10FSnG0QhPzF5x1IFBhSA47Pkqy1",
+                "1fjp6sSyzXBQ6aNKgySoX53x96PsAuo9H",
+                "1u4ujsAph1Nk2xWB5mjGTUhMmjUhiRRke",
+                "1Dkx1BC7xZ1k6IoHPL3j-9g9xc_3mOlIk",
+                "1jotWX0RlDpD4tKWwmfCXprFu8VYUKykv",
+                "1eM-NGkZCO02AblPpRlpzLQWSwSlm0Jv6",
+                "1Wbp21ayfJyNaVDMVE1bKnOy21FznmZ-b",
+                "1Ht0_Su8SHb3iGq9chaRW_nyyHe2Vo5_a",
+                "1R-_yA-cguDIrzJhYjLZyHvtLtiUWZWQ_",
+                "1c63wtXwkMlYPIThDGCObp-WDlsPlfdTP",
+                "1FRSZc4w_CQts33ukD-ztIC_gNpuiyrQ5",
+                "1Uyktf4v6Bvs3QDpf3E8rVwtssWRVvuy1"
+                // Add more Google Drive file IDs here.
+              ];
+
+              const socialMediaPostersContainer = document.currentScript.parentElement;
+              socialMediaPosters.forEach(function (fileId, idx) {
+                const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
+                const col = document.createElement("div");
+                col.className =
+                  "col-lg-3 col-md-6 portfolio-item isotope-item filter-product";
+                col.innerHTML = `
+                    <div class="portfolio-content social-poster-content h-100 d-flex flex-column align-items-center justify-content-center">
+                      <img src="${thumbnail}" class="img-fluid social-poster-image" alt="Social Media Poster ${idx + 1
                   }" />
-                      <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
-                        <a href="${thumbnail}" data-type="image" data-gallery="portfolio-gallery-product" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                      <div class="portfolio-info social-poster-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                        <a href="${thumbnail}" data-type="image" data-gallery="portfolio-gallery-model" class="glightbox preview-link social-poster-preview d-flex align-items-center justify-content-center" aria-label="View Social Media Poster ${idx + 1}" style="width: 48px; height: 48px;">
                           <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
                         </a>
                       </div>
                     </div>
                   `;
-                  socialmediaposterContainer.appendChild(col);
-                });
-              </script>
-              <!-- End Portfolio Item -->
+                socialMediaPostersContainer.appendChild(col);
+              });
+            </script>
+            <!-- End Social Media Posters -->
 
-              <script>
-                // Array of video sources for 3D Animation (filter-branding)
-                const brandingVideos = [
-                  {
-                    src: "https://drive.google.com/file/d/1_jbbDpy9xfx8zS0vFNE1ULISHDLOSmcH/preview",
-                    title: "Mr & Ms CCS 2023 Logo Animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1PPF_lukDUbAUDmIDUi63GLSsU_FkoSb0/preview",
-                    title: "CCS Department Logo Animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1Hc3yVkBQqomOx29OkunVjRBW889wK5YB/preview",
-                    title: "NANSUI Logo Animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1j3NBUgurLKjPpukUhXc126PUgskwCfU3/preview",
-                    title: "Iloilo PSABE Logo Animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/14OvId1yQPbWE_VLvKxB4hX0WbL9i9Q8G/preview",
-                    title: "Iloilo PSABE Intro animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1qXW3E0xdGJ0aKdqLyxKrcg3tr6bJjMFh/preview",
-                    title: "Moonknight Animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1ai2TsRB_ItAUvD_xT0wSneYcq5erL1rx/preview",
-                    title: "Fine Line Films Intro animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1YJJjOs-R3I4FFMiCET_PwDb5_CErL6Kt/preview",
-                    title: "Plastics Bag Product animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1N6n3aFRZHxy5z4ONOpeRGrDztoiL-TXj/preview",
-                    title: "Floor tiles product Animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1pATIvJutm0LWfHQJWMofVbU3-Hx5-Seg/preview",
-                    title: "Running to the wild animation",
-                  },
+            <!-- 3D Models -->
+            <script>
+              const model3d = [
+                "1D0_6kJki84QCcM3gyjtBgr1WMdwW6Qse",
+                "1S1ZLFHSJ45La_xE3UjTOeO0NBN3pRqAF",
+                "13bAH_c692TOJPaVHd-yhS5lKxcWGxg6V",
+                "1tPXT2EhKF3ax1RN_viuxfTJ8GmZeTGr7",
+                "1jIwh5ge32R3iEi-i5yrSE4Zsm8P7wIUt",
+                "1P4TWYYApnZM1Ma1R08zNcTN4tO9ziFHQ",
+                "1moI6-I02SEMNTrikywy2wOfKA4m9Y9_y",
+                "1JFzzXjmcbHx78c8HmdZ2NqtAb4PQZUZY",
+                "1SM5_UXew74I999L0CMoOi3xL0yIQKYzL",
+                "1tGQp1Zo_yDOD0r6dvB3Nsl7Txisjn7Jg",
+                "1WPIDZQDLskfLq2127zoQByjoUPed6Dtj",
+                "1NHqbOKX07QuZtW4u5gr1wWHW__HvuOZA",
+                "1PfhG5j09XkFxU1ifllocgy1RDX1x2ws5",
+                "1TzTFhtZTVO-KTPnK-F98rXd2Myj0_iVd",
+                "17l8kz0RyMRJGNzPn2McbJ2D3x7TztvDC",
+                "1ad40Mp1k2zLoF3su1t93CuaFPZ7aleLk",
+                "1wgjltQObf7mhBCm_3G9YkchUnRlJ1G2D",
+                "15WHoEmJ5K4Vvc-RDFeF8tuXB2QYNHeZF",
+                "17F8BSpRRi2dxgFFJzyXhqQq3vIXdPXUV",
+                "113PRRwlFTx4WCjVlSUbxsB3IS8C3l2yu",
+                "1VclweWvRs8ZVKU1A9NZN9w3RiVoxAZk7",
+                "1XTXe2Ro1Jcs2qLp-R1dP_Vv_2JwnPUGl",
+                "1VCpkxepGFdX9rO2BXr8LAQaEBEv88UfP",
+                "1lN9GUdLI-JohKS6FZj_cLzpKa7mbp5oF",
+                "1c3GdBPCDMj1yfyxwPLNjnRyvVhU7WaWh",
+                "1PuUpsceE-MYG809bFig-Q36iaLzENR38",
 
-                  {
-                    src: "https://drive.google.com/file/d/1ZIGWUF003fr37-XwKtINJIbTu7vHu39G/preview",
-                    title: "Cup Dancing animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1d3VG6YowtHohc1_ztsa2OsodTvrYA5eX/preview",
-                    title: "Electric Thesis animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1dPeajzdF-iqRNQusdZuDX9fIc7WXtHY3/preview",
-                    title: "Thermoelectric Thesis animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1JQKwp5a4q_k8ZF1fHwqV5FLYoDBualm8/preview",
-                    title: "Wind Turbine Thesis animation",
-                  },
+                // Add more Google Drive file IDs here.
+              ];
 
-                  {
-                    src: "https://drive.google.com/file/d/1Sw7KS0Pqiqi0yuvAj8XpDH17XZy4XXtT/preview",
-                    title: "Grass run hiding animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1DRDY7JiSok29Ji4sitfDSGdFiG3857rw/preview",
-                    title: "Cube character animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1sxEmbOOYafbrf8UOPTZrzqLc3nv2-vMa/preview",
-                    title: "Flick G gang contest animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1ve5w-JeoCvP9lyWEMqIm2Lb2nYcypHL_/preview",
-                    title: "Albay to Iloilo PSABE animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/1YgiVvTV52G2Mejnkz9GpAepGxurrTY8l/preview",
-                    title: "Iloilo PSABE Loop animation",
-                  },
-                  {
-                    src: "https://drive.google.com/file/d/17Eoi-MX1QNJBMY_KlqA_wRiXiYQ1JSZM/preview",
-                    title: "Pila Museum Virtual Tour for Mobile Application",
-                  },
-                ];
+              const model3dContainer = document.currentScript.parentElement;
+              model3d.forEach(function (fileId, idx) {
+                const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
+                const col = document.createElement("div");
+                col.className =
+                  "col-lg-3 col-md-6 portfolio-item isotope-item filter-model";
+                col.innerHTML = `
+                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
+                      <img src="${thumbnail}" class="img-fluid" alt="3D Model ${idx + 1
+                  }" />
+                      <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                        <a href="${thumbnail}" data-type="image" data-gallery="portfolio-gallery-model" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                          <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
+                        </a>
+                      </div>
+                    </div>
+                  `;
+                model3dContainer.appendChild(col);
+              });
+            </script>
+            <!-- End 3D Models -->
 
-                const brandingContainer = document.currentScript.parentElement;
-                brandingVideos.forEach(function (video) {
-                  const fileId = video.src.match(/\/d\/([^/]+)/)[1];
-                  const poster = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
-                  const col = document.createElement("div");
-                  col.className =
-                    "col-lg-4 col-md-6 portfolio-item isotope-item filter-branding";
-                  col.innerHTML = `
+
+
+
+            <!-- End Portfolio Item -->
+
+            <!-- <script>
+              const brandingVideos = [
+                {
+                  src: "https://drive.google.com/file/d/1_jbbDpy9xfx8zS0vFNE1ULISHDLOSmcH/preview",
+                  title: "Mr & Ms CCS 2023 Logo Animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1PPF_lukDUbAUDmIDUi63GLSsU_FkoSb0/preview",
+                  title: "CCS Department Logo Animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1Hc3yVkBQqomOx29OkunVjRBW889wK5YB/preview",
+                  title: "NANSUI Logo Animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1j3NBUgurLKjPpukUhXc126PUgskwCfU3/preview",
+                  title: "Iloilo PSABE Logo Animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/14OvId1yQPbWE_VLvKxB4hX0WbL9i9Q8G/preview",
+                  title: "Iloilo PSABE Intro animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1qXW3E0xdGJ0aKdqLyxKrcg3tr6bJjMFh/preview",
+                  title: "Moonknight Animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1ai2TsRB_ItAUvD_xT0wSneYcq5erL1rx/preview",
+                  title: "Fine Line Films Intro animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1YJJjOs-R3I4FFMiCET_PwDb5_CErL6Kt/preview",
+                  title: "Plastics Bag Product animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1N6n3aFRZHxy5z4ONOpeRGrDztoiL-TXj/preview",
+                  title: "Floor tiles product Animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1pATIvJutm0LWfHQJWMofVbU3-Hx5-Seg/preview",
+                  title: "Running to the wild animation",
+                },
+
+                {
+                  src: "https://drive.google.com/file/d/1ZIGWUF003fr37-XwKtINJIbTu7vHu39G/preview",
+                  title: "Cup Dancing animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1d3VG6YowtHohc1_ztsa2OsodTvrYA5eX/preview",
+                  title: "Electric Thesis animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1dPeajzdF-iqRNQusdZuDX9fIc7WXtHY3/preview",
+                  title: "Thermoelectric Thesis animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1JQKwp5a4q_k8ZF1fHwqV5FLYoDBualm8/preview",
+                  title: "Wind Turbine Thesis animation",
+                },
+
+                {
+                  src: "https://drive.google.com/file/d/1Sw7KS0Pqiqi0yuvAj8XpDH17XZy4XXtT/preview",
+                  title: "Grass run hiding animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1DRDY7JiSok29Ji4sitfDSGdFiG3857rw/preview",
+                  title: "Cube character animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1sxEmbOOYafbrf8UOPTZrzqLc3nv2-vMa/preview",
+                  title: "Flick G gang contest animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1ve5w-JeoCvP9lyWEMqIm2Lb2nYcypHL_/preview",
+                  title: "Albay to Iloilo PSABE animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/1YgiVvTV52G2Mejnkz9GpAepGxurrTY8l/preview",
+                  title: "Iloilo PSABE Loop animation",
+                },
+                {
+                  src: "https://drive.google.com/file/d/17Eoi-MX1QNJBMY_KlqA_wRiXiYQ1JSZM/preview",
+                  title: "Pila Museum Virtual Tour for Mobile Application",
+                },
+              ];
+
+              const brandingContainer = document.currentScript.parentElement;
+              brandingVideos.forEach(function (video) {
+                const fileId = video.src.match(/\/d\/([^/]+)/)[1];
+                const poster = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
+                const col = document.createElement("div");
+                col.className =
+                  "col-lg-4 col-md-6 portfolio-item isotope-item filter-branding";
+                col.innerHTML = `
     <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
       <div class="video-poster-wrapper" tabindex="0" style="position:relative; width:100%; cursor:pointer; outline:none;">
-        <img src="${poster}" alt="${
-                    video.title
+        <img src="${poster}" alt="${video.title
                   }" class="img-fluid" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:8px;">
         <a class="play-btn-overlay d-flex align-items-center justify-content-center"
            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(0,0,0,0.6);border-radius:50%;color:white;font-size:2.5rem;transition:background 0.2s;z-index:2;">
@@ -658,65 +639,122 @@
       </div>
     </div>
   `;
-                  // Make the whole poster clickable to play inline
-                  const posterWrapper = col.querySelector(
-                    ".video-poster-wrapper"
-                  );
-                  posterWrapper.addEventListener("click", function () {
-                    this.outerHTML = `<iframe width="100%" height="315" src="${video.src}&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-                  });
-                  // Keyboard accessibility
-                  posterWrapper.addEventListener("keydown", function (e) {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      this.outerHTML = `<iframe width="100%" height="315" src="${video.src}&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-                    }
-                  });
-                  brandingContainer.appendChild(col);
+                // Make the whole poster clickable to play inline
+                const posterWrapper = col.querySelector(
+                  ".video-poster-wrapper"
+                );
+                posterWrapper.addEventListener("click", function () {
+                  this.outerHTML = `<iframe width="100%" height="315" src="${video.src}&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
                 });
-                // Add this CSS to your main CSS file or in a <style> tag:
-              </script>
-              <style>
-                .video-poster-wrapper:hover .play-btn-overlay {
-                  background: rgba(0, 0, 0, 0.8);
-                  color: #ffd700;
-                }
-                .video-poster-wrapper .play-btn-overlay {
-                  pointer-events: none; /* So the click goes to the wrapper */
-                }
-              </style>
-              <!-- End Portfolio Item -->
+                // Keyboard accessibility
+                posterWrapper.addEventListener("keydown", function (e) {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    this.outerHTML = `<iframe width="100%" height="315" src="${video.src}&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                  }
+                });
+                brandingContainer.appendChild(col);
+              });
+              // Add this CSS to your main CSS file or in a <style> tag:
+            </script>
+            <style>
+              .video-poster-wrapper:hover .play-btn-overlay {
+                background: rgba(0, 0, 0, 0.8);
+                color: #ffd700;
+              }
 
-              <script>
-                const gameAssetsImages = [
-                  "assets/img/portfolio/gameassets/16.png",
-                  "assets/img/portfolio/gameassets/1.png",
-                  "assets/img/portfolio/gameassets/2.png",
-                  "assets/img/portfolio/gameassets/3.png",
-                  "assets/img/portfolio/gameassets/4.png",
-                  "assets/img/portfolio/gameassets/5.png",
-                  "assets/img/portfolio/gameassets/6.png",
-                  "assets/img/portfolio/gameassets/7.png",
-                  "assets/img/portfolio/gameassets/8.png",
-                  "assets/img/portfolio/gameassets/9.png",
-                  "assets/img/portfolio/gameassets/15.png",
-                  "assets/img/portfolio/gameassets/10.png",
-                  "assets/img/portfolio/gameassets/11.png",
-                  "assets/img/portfolio/gameassets/12.png",
-                  "assets/img/portfolio/gameassets/13.png",
-                  // Add more PNGs as needed
-                ];
+              .video-poster-wrapper .play-btn-overlay {
+                pointer-events: none;
+              }
+            </style> -->
+            <!-- End Portfolio Item -->
 
-                const gameAssetsContainer =
-                  document.currentScript.parentElement;
-                gameAssetsImages.forEach(function (src, idx) {
-                  const col = document.createElement("div");
-                  col.className =
-                    "col-lg-3 col-md-6 portfolio-item isotope-item filter-books";
-                  col.innerHTML = `
+            <!-- Digital Art -->
+            <script>
+              const digitalArt = [
+                "16SK4Unks-tOwlZld4EUyKw5LPhYBngFh",
+                "18W6VQ1hhT1VqR7-yJRGJW2bga_vJy0s7",
+                "11VHAs6BQVL3PV5VrGEeeEEGgu1r7dkXK",
+                "1iwENLUkVIUmvIVaTLz3z2mC2x6FQg-ym",
+                "1FM7mkKJY0qRcDNOXK2kJyQ7fUJVy46uw",
+                "1lfyWbHw06cCXGGpn9ygIEd8wEWN5vWLR",
+                "1_Bg7ioHgSQh_3IVt4EB70I9zSZ-oL2cp",
+                "10KFOLP1svxEnJn24zwzPRY2I4j7RuSgX",
+                "1id7FgKTopjkpv07Och7r5DNTiaZmuNuI",
+                "1SI1Szgc4belLtatjjhqrVOOWqKX28pJd",
+                "1veTcfDWfcOt5BlNDbHpfuPz9zpMrb6fb",
+                "1Q4lBS7PfIuxBXPTvpkMjnae28xEeQnPz",
+                "1h3GgrTe8LtGbqV0E0_mX-PsHtWKDWVXJ",
+                "11elnThiV64ORWFTGtRilKym-h4RXjbXt",
+                "1VZvgBV18gspEWahMlS3oF5QWinyMAhME",
+                "1VgyGm1GPs2eBSp67-8LSWr6fawMwRoH4",
+                "1GgzAH9EZ7YQB0XDjmr9B0mEdFEUrC8sa",
+                "1p5MzROjOY2j6S6ntc8a84ZbPCEdqr5Ny",
+                "1M9BY4lz872QsTUhvLQAlr23BtBowqMj6",
+                "1mmPUg4c1RztPklivyeMkwgZ1rp9qMYcc",
+                "1Kf7XDMcn_75vr7T9_jU4ulDggBzRzKxa",
+                "1Paw6h6hCwdycbPyXbRz1zZ92BitYlLZi",
+                "11dg3sJy3J3h37ESAmz78PReuj6GiPb_5",
+                "1ZT_nFFUt_arxaFlMy6a-qO5MrXE9kK0O",
+                "16pGRxd2El6bFefGPXNtUmlIGHriZzWbs"
+
+
+                // Add more Google Drive file IDs here.
+              ];
+
+              const digitalArtContainer = document.currentScript.parentElement;
+              digitalArt.forEach(function (fileId, idx) {
+                const thumbnail = `https://lh3.googleusercontent.com/d/${fileId}=w1000`;
+                const col = document.createElement("div");
+                col.className =
+                  "col-lg-3 col-md-6 portfolio-item isotope-item filter-digitalart";
+                col.innerHTML = `
                     <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
-                      <img src="${src}" class="img-fluid" alt="Game Asset ${
-                    idx + 1
+                      <img src="${thumbnail}" class="img-fluid" alt="Digital Art ${idx + 1
+                  }" />
+                      <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                        <a href="${thumbnail}" data-type="image" data-gallery="portfolio-gallery-digitalart" class="glightbox preview-link d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                          <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
+                        </a>
+                      </div>
+                    </div>
+                  `;
+                digitalArtContainer.appendChild(col);
+              });
+            </script>
+
+            <!-- End Digital Art -->
+
+
+            <script>
+              const gameAssetsImages = [
+                "assets/img/portfolio/gameassets/16.png",
+                "assets/img/portfolio/gameassets/1.png",
+                "assets/img/portfolio/gameassets/2.png",
+                "assets/img/portfolio/gameassets/3.png",
+                "assets/img/portfolio/gameassets/4.png",
+                "assets/img/portfolio/gameassets/5.png",
+                "assets/img/portfolio/gameassets/6.png",
+                "assets/img/portfolio/gameassets/7.png",
+                "assets/img/portfolio/gameassets/8.png",
+                "assets/img/portfolio/gameassets/9.png",
+                "assets/img/portfolio/gameassets/15.png",
+                "assets/img/portfolio/gameassets/10.png",
+                "assets/img/portfolio/gameassets/11.png",
+                "assets/img/portfolio/gameassets/12.png",
+                "assets/img/portfolio/gameassets/13.png",
+                // Add more PNGs as needed
+              ];
+
+              const gameAssetsContainer =
+                document.currentScript.parentElement;
+              gameAssetsImages.forEach(function (src, idx) {
+                const col = document.createElement("div");
+                col.className =
+                  "col-lg-3 col-md-6 portfolio-item isotope-item filter-books";
+                col.innerHTML = `
+                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
+                      <img src="${src}" class="img-fluid" alt="Game Asset ${idx + 1
                   }" style="aspect-ratio: 1 / 1; object-fit: cover; width: 100%; height: auto; max-width: 330px; max-height: 330px;" />
                       <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
                         <h4>Game Asset ${idx + 1}</h4>
@@ -729,153 +767,267 @@
                       </div>
                     </div>
                   `;
-                  gameAssetsContainer.appendChild(col);
+                gameAssetsContainer.appendChild(col);
+              });
+            </script>
+
+            <script>
+              const portfolioShowcase = document.querySelector(".portfolio-showcase");
+              const portfolioShowcaseDeck = portfolioShowcase.querySelector(".portfolio-showcase-deck");
+              const portfolioShowcaseItems = Array.from(
+                document.querySelectorAll("#portfolio .filter-product img, #portfolio .filter-model img, #portfolio .filter-digitalart img, #portfolio .filter-books img")
+              ).map(function (image) {
+                return {
+                  src: image.src,
+                  alt: image.alt,
+                  preview: image.closest(".portfolio-item").querySelector(".glightbox")
+                };
+              }).filter(function (item) {
+                return item.preview && !item.src.includes("/d/=w1000");
+              });
+              const itemCount = Math.min(12, portfolioShowcaseItems.length);
+              const featuredItems = Array.from({ length: itemCount }, function (_, index) {
+                return portfolioShowcaseItems[Math.floor(index * portfolioShowcaseItems.length / itemCount)];
+              });
+              const portfolioShowcaseTrack = document.createElement("div");
+              portfolioShowcaseTrack.className = "portfolio-showcase-track";
+
+              [false, true].forEach(function (isDuplicate) {
+                const group = document.createElement("div");
+                group.className = "portfolio-showcase-group";
+                group.setAttribute("aria-hidden", String(isDuplicate));
+
+                featuredItems.forEach(function (item, index) {
+                  const card = document.createElement("button");
+                  const image = document.createElement("img");
+                  card.type = "button";
+                  card.className = "portfolio-showcase-card";
+                  card.setAttribute("aria-label", `View ${item.alt}`);
+                  card.tabIndex = isDuplicate ? -1 : 0;
+                  card.style.transform = `rotate(${(index % 5 - 2) * 2}deg)`;
+                  image.src = item.src;
+                  image.alt = isDuplicate ? "" : item.alt;
+                  card.appendChild(image);
+                  card.addEventListener("click", function () {
+                    item.preview.click();
+                  });
+                  group.appendChild(card);
                 });
-              </script>
-              <!-- End Portfolio Item -->
-            </div>
-            <!-- End Portfolio Container -->
+
+                portfolioShowcaseTrack.appendChild(group);
+              });
+              portfolioShowcaseDeck.appendChild(portfolioShowcaseTrack);
+
+              portfolioShowcase.querySelector(".portfolio-showcase-prev").addEventListener("click", function () {
+                portfolioShowcaseTrack.style.animationDirection = "reverse";
+                this.setAttribute("aria-pressed", "true");
+                portfolioShowcase.querySelector(".portfolio-showcase-next").setAttribute("aria-pressed", "false");
+              });
+              portfolioShowcase.querySelector(".portfolio-showcase-next").addEventListener("click", function () {
+                portfolioShowcaseTrack.style.animationDirection = "normal";
+                this.setAttribute("aria-pressed", "true");
+                portfolioShowcase.querySelector(".portfolio-showcase-prev").setAttribute("aria-pressed", "false");
+              });
+            </script>
+            <!-- End Portfolio Item -->
           </div>
-        </div>
-      </section>
-      <!-- /Portfolio Section -->
-      <!-- Services Section -->
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link"> 2D Illustration & Commissions</a>
-                </h4>
-                <p class="description">
-                  Custom digital illustrations, character designs, and
-                  commission-based artworks—including pixel art and concept art.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-card-checklist"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Game Art & Assets</a>
-                </h4>
-                <p class="description">
-                  High-quality 2D pixel assets and 3D models optimized for games
-                  and interactive media.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">3D Modeling & Animation</a>
-                </h4>
-                <p class="description">
-                  Stylized and realistic 3D models for games, apps, and creative
-                  projects using Blender.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-binoculars"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">NFT Art & Digital Collectibles</a>
-                </h4>
-                <p class="description">
-                  Creation of unique, high-resolution digital artworks tailored
-                  for NFT platforms and collectors.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services Section -->
-    </main>
-
-    <!-- <footer id="footer" class="footer position-relative light-background">
-      <div class="container">
-        <div class="copyright text-center">
-          <p>
-            © <span>Copyright</span>
-            <strong class="px-1 sitename">iPortfolio</strong>
-            <span>All Rights Reserved</span>
-          </p>
-        </div>
-        <div class="credits">
-         
-          Designed by
-          <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by
-          <a href="https://themewagon.com">ThemeWagon</a>
+          <!-- End Portfolio Container -->
         </div>
       </div>
-    </footer> -->
+    </section>
+    <!-- /Portfolio Section -->
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- Services Section -->
+    <section id="services" class="services section dark-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Creative production shaped around the story, space, and audience your project needs.</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4 service-grid">
+          <div class="col-lg-6 col-md-6 service-item" data-aos="fade-up" data-aos-delay="100">
+            <article class="service-panel">
+              <div class="service-panel-heading">
+                <span class="service-number">01</span>
+                <span class="service-icon"><i class="bi bi-play-btn" aria-hidden="true"></i></span>
+                <span class="service-category">Motion / Film</span>
+              </div>
+              <h3>3D Video &amp; Motion Graphics</h3>
+              <p class="service-summary">High-impact motion design and cinematic rendering that capture attention and communicate brand stories.</p>
+              <details class="service-details">
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <div class="service-details-copy">
+                  <p><strong>Deliverables</strong> Product reveals, commercial ads, logo stings, LED and digital signage simulations, and promotional video collateral.</p>
+                  <p><strong>Focus</strong> Dynamic camera movement, smooth pacing, high-end visual effects, and expressive audio-visual timing.</p>
+                </div>
+              </details>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-md-6 service-item" data-aos="fade-up" data-aos-delay="180">
+            <article class="service-panel">
+              <div class="service-panel-heading">
+                <span class="service-number">02</span>
+                <span class="service-icon"><i class="bi bi-box" aria-hidden="true"></i></span>
+                <span class="service-category">Objects / Space</span>
+              </div>
+              <h3>3D Modeling</h3>
+              <p class="service-summary">Detailed 3D assets for product visualization, spatial concepts, and digital environments.</p>
+              <details class="service-details">
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <div class="service-details-copy">
+                  <p><strong>Deliverables</strong> Architectural and spatial mockups, product models, hard-surface props, and textured environments.</p>
+                  <p><strong>Focus</strong> Accurate proportions, realistic texturing, optimized topology, and studio lighting setups.</p>
+                </div>
+              </details>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-md-6 service-item" data-aos="fade-up" data-aos-delay="260">
+            <article class="service-panel">
+              <div class="service-panel-heading">
+                <span class="service-number">03</span>
+                <span class="service-icon"><i class="bi bi-megaphone" aria-hidden="true"></i></span>
+                <span class="service-category">Campaign / Identity</span>
+              </div>
+              <h3>Social Posters &amp; Brand Collateral</h3>
+              <p class="service-summary">Digital graphics designed to strengthen brand identity and connect with audiences across platforms.</p>
+              <details class="service-details">
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <div class="service-details-copy">
+                  <p><strong>Deliverables</strong> Promotional banners, ad campaigns, event posters, carousel graphics, and social templates.</p>
+                  <p><strong>Focus</strong> Strong visual hierarchy, bold typography, layout balance, and platform-specific formatting.</p>
+                </div>
+              </details>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-md-6 service-item" data-aos="fade-up" data-aos-delay="340">
+            <article class="service-panel">
+              <div class="service-panel-heading">
+                <span class="service-number">04</span>
+                <span class="service-icon"><i class="bi bi-brush" aria-hidden="true"></i></span>
+                <span class="service-category">Illustration / Concept</span>
+              </div>
+              <h3>2D Digital Art &amp; Concept Illustration</h3>
+              <p class="service-summary">Custom artwork and visual development that establish mood, style, and character for creative projects.</p>
+              <details class="service-details">
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <div class="service-details-copy">
+                  <p><strong>Deliverables</strong> Character key art, concept sketches, visual assets, and digital paintwork.</p>
+                  <p><strong>Focus</strong> Composition, color theory, lighting, mood, and detailed digital rendering.</p>
+                </div>
+              </details>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+    <section id="contact" class="contact section dark-background">
+      <div class="container">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact Information</h2>
+          <p>For commissions, collaborations, or questions, reach out through any of these channels.</p>
+        </div>
+
+        <div class="contact-showcase" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-message">
+            <span class="contact-kicker">OPEN FOR CREATIVE PROJECTS</span>
+            <h3>Have an idea?<br />Let’s make it real.</h3>
+            <p>Tell me what you’re working on and let’s find the right way to bring it to life.</p>
+            <a class="contact-email-link" href="mailto:suinanlawrence8@gmail.com">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span>suinanlawrence8@gmail.com</span>
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="contact-links" aria-label="Other contact channels">
+            <a class="contact-link" href="tel:+639940365220">
+              <span class="contact-link-icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+              <span class="contact-link-copy"><span>Phone</span><strong>+63 994 036 5220</strong></span>
+              <i class="bi bi-arrow-up-right contact-link-arrow" aria-hidden="true"></i>
+            </a>
+            <a class="contact-link" href="viber://chat?number=%2B639940365220"
+              aria-label="Message Vince on Viber at plus 63 994 036 5220">
+              <span class="contact-link-icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></span>
+              <span class="contact-link-copy"><span>Viber</span><strong>Ready to chat</strong></span>
+              <i class="bi bi-arrow-up-right contact-link-arrow" aria-hidden="true"></i>
+            </a>
+            <a class="contact-link" href="https://www.facebook.com/vince.suinan.30/" target="_blank"
+              rel="noopener noreferrer">
+              <span class="contact-link-icon"><i class="bi bi-facebook" aria-hidden="true"></i></span>
+              <span class="contact-link-copy"><span>Facebook</span><strong>Vince Suinan</strong></span>
+              <i class="bi bi-arrow-up-right contact-link-arrow" aria-hidden="true"></i>
+            </a>
+            <a class="contact-link" href="https://www.instagram.com/artsofvince/" target="_blank"
+              rel="noopener noreferrer">
+              <span class="contact-link-icon"><i class="bi bi-instagram" aria-hidden="true"></i></span>
+              <span class="contact-link-copy"><span>Instagram</span><strong>@ArtsofVince</strong></span>
+              <i class="bi bi-arrow-up-right contact-link-arrow" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Vince Suinan</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+
+      <!-- © 2026 Vince Suinan. All Rights Reserved.
+
+Crafting visual stories & 3D experiences from Manila, Philippines.
+
+[Email] • [LinkedIn] • [Behance] • [Instagram] -->
+      <div class="credits">
+
+        Designed by
+        <a>ArtsofVince</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
