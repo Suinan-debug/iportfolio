@@ -381,6 +381,36 @@
       sortBy: sort
     });
 
+    const categoryPanel = isotopeItem.querySelector('.portfolio-category-panel');
+    const stickyFilters = isotopeItem.querySelector('.portfolio-sticky-filters');
+    const stickyFilterButtons = Array.from(stickyFilters.querySelectorAll('button'));
+
+    stickyFilterButtons.forEach(function(button) {
+      button.setAttribute('aria-pressed', String(button.getAttribute('data-filter') === filter));
+      button.addEventListener('click', function() {
+        const matchingFilter = Array.from(isotopeItem.querySelectorAll('.isotope-filters li')).find(function(filterItem) {
+          return filterItem.getAttribute('data-filter') === button.getAttribute('data-filter');
+        });
+        matchingFilter.querySelector('button').click();
+      });
+    });
+
+    const updateStickyFilterVisibility = function() {
+      const header = document.querySelector('#header');
+      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+      const stickyTopGap = stickyFilters.offsetHeight + 8;
+      const shouldShow = categoryPanel.getBoundingClientRect().bottom <= headerBottom + stickyTopGap;
+      if (stickyFilters.classList.contains('is-visible') === shouldShow) return;
+      stickyFilters.classList.toggle('is-visible', shouldShow);
+      stickyFilters.setAttribute('aria-hidden', String(!shouldShow));
+    };
+
+    window.addEventListener('scroll', updateStickyFilterVisibility, { passive: true });
+    window.addEventListener('scrollend', updateStickyFilterVisibility, { passive: true });
+    document.addEventListener('scroll', updateStickyFilterVisibility, { capture: true, passive: true });
+    window.addEventListener('resize', updateStickyFilterVisibility);
+    updateStickyFilterVisibility();
+
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
@@ -388,16 +418,27 @@
         isotopeItem.querySelectorAll('.isotope-filters li button').forEach(function(button) {
           button.setAttribute('aria-pressed', String(button.parentElement.classList.contains('filter-active')));
         });
-          const selectedFilter = this.getAttribute('data-filter');
-          const showcase = isotopeItem.querySelector('.portfolio-showcase');
-          const isotopeContainer = isotopeItem.querySelector('.isotope-container');
-          const showAllShowcase = selectedFilter === '*';
-          isotopeItem.classList.toggle('showcase-active', showAllShowcase);
-          showcase.setAttribute('aria-hidden', String(!showAllShowcase));
-          isotopeContainer.setAttribute('aria-hidden', String(showAllShowcase));
+        stickyFilterButtons.forEach(function(button) {
+          button.setAttribute('aria-pressed', String(button.getAttribute('data-filter') === this.getAttribute('data-filter')));
+        }, this);
+        const selectedFilter = this.getAttribute('data-filter');
+        const showcase = isotopeItem.querySelector('.portfolio-showcase');
+        const isotopeContainer = isotopeItem.querySelector('.isotope-container');
+        const showAllShowcase = selectedFilter === '*';
+        isotopeItem.classList.toggle('showcase-active', showAllShowcase);
+        showcase.setAttribute('aria-hidden', String(!showAllShowcase));
+        isotopeContainer.setAttribute('aria-hidden', String(showAllShowcase));
         initIsotope.arrange({
-            filter: selectedFilter
+          filter: selectedFilter
         });
+        const scrollTarget = showAllShowcase ? showcase : isotopeContainer.querySelector(selectedFilter) || isotopeContainer;
+        window.setTimeout(function() {
+          scrollTarget.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+          window.setTimeout(updateStickyFilterVisibility, 1600);
+        }, 100);
         if (typeof aosInit === 'function') {
           aosInit();
         }

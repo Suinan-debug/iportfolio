@@ -252,21 +252,78 @@
         </p>
       </div>
       <!-- End Section Title -->
-      <div class="container">
+      <div class="container portfolio-categories-container">
         <div class="isotope-layout showcase-active" data-default-filter="*" data-layout="masonry"
           data-sort="original-order">
-          <ul class="portfolio-filters isotope-filters" aria-label="Portfolio categories" data-aos="fade-up"
-            data-aos-delay="100">
-            <li data-filter="*" class="filter-active"><button type="button" aria-pressed="true">All</button></li>
-            <li data-filter=".filter-app"><button type="button" aria-pressed="false">3D Video Animation/Motion
-                Graphics</button></li>
-            <li data-filter=".filter-product"><button type="button" aria-pressed="false">Social Media Posters</button>
-            </li>
-            <li data-filter=".filter-model"><button type="button" aria-pressed="false">3D Model</button></li>
-            <li data-filter=".filter-digitalart"><button type="button" aria-pressed="false">Digital Art</button></li>
-            <li data-filter=".filter-books"><button type="button" aria-pressed="false">Game Assets</button></li>
-          </ul>
+          <div class="portfolio-category-panel">
+            <h3 class="portfolio-categories-title" data-aos="fade-up">Browse by category</h3>
+            <ul class="portfolio-filters isotope-filters" aria-label="Portfolio categories" data-aos="fade-up"
+              data-aos-delay="100">
+              <li data-filter="*" class="filter-active">
+                <button type="button" aria-pressed="true">
+                  <img src="assets/img/portfolio/3danimation/img/moonknight.png" alt="" />
+                  <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">Explore everything</span><span
+                      class="portfolio-filter-name">All projects</span></span>
+                </button>
+              </li>
+              <li data-filter=".filter-app">
+                <button type="button" aria-pressed="false">
+                  <img src="assets/img/portfolio/3danimation/img/intro.png" alt="" />
+                  <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">01 / Motion</span><span
+                      class="portfolio-filter-name">3D animation</span></span>
+                </button>
+              </li>
+              <li data-filter=".filter-product">
+                <button type="button" aria-pressed="false">
+                  <img src="https://lh3.googleusercontent.com/d/15f8OHujoiMdqfZLT6pFn6dTeZeISGttu=w640" alt="" />
+                  <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">02 / Design</span><span
+                      class="portfolio-filter-name">Social posters</span></span>
+                </button>
+              </li>
+              <li data-filter=".filter-model">
+                <button type="button" aria-pressed="false">
+                  <img src="https://lh3.googleusercontent.com/d/1D0_6kJki84QCcM3gyjtBgr1WMdwW6Qse=w640" alt="" />
+                  <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">03 / Form</span><span
+                      class="portfolio-filter-name">3D models</span></span>
+                </button>
+              </li>
+              <li data-filter=".filter-digitalart">
+                <button type="button" aria-pressed="false">
+                  <img src="https://lh3.googleusercontent.com/d/16SK4Unks-tOwlZld4EUyKw5LPhYBngFh=w640" alt="" />
+                  <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">04 / Illustration</span><span
+                      class="portfolio-filter-name">Digital art</span></span>
+                </button>
+              </li>
+              <li data-filter=".filter-books">
+                <button type="button" aria-pressed="false">
+                  <img src="assets/img/portfolio/gameassets/optimized/16.png" alt="" />
+                  <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">05 / Interactive</span><span
+                      class="portfolio-filter-name">Game assets</span></span>
+                </button>
+              </li>
+            </ul>
+          </div>
           <!-- End Portfolio Filters -->
+
+          <nav class="portfolio-sticky-filters" aria-label="Portfolio category shortcuts" aria-hidden="true">
+            <button type="button" data-filter="*" aria-label="Show all projects" aria-pressed="true">All</button>
+            <button type="button" data-filter=".filter-app" aria-label="Show 3D animation projects"
+              aria-pressed="false">Motion</button>
+            <button type="button" data-filter=".filter-product" aria-label="Show social media posters"
+              aria-pressed="false">Posters</button>
+            <button type="button" data-filter=".filter-model" aria-label="Show 3D models"
+              aria-pressed="false">3D</button>
+            <button type="button" data-filter=".filter-digitalart" aria-label="Show digital art"
+              aria-pressed="false">Digital art</button>
+            <button type="button" data-filter=".filter-books" aria-label="Show game assets"
+              aria-pressed="false">Game assets</button>
+          </nav>
 
           <section class="portfolio-showcase" aria-labelledby="portfolio-showcase-title">
             <h3 id="portfolio-showcase-title">A place to display your<br />masterpiece.</h3>
@@ -323,6 +380,7 @@
 
               const videomotionContainer = document.currentScript.parentElement;
               const videoModal = document.createElement("div");
+              videoModal.className = "video-motion-modal";
               videoModal.setAttribute("role", "dialog");
               videoModal.setAttribute("aria-modal", "true");
               videoModal.setAttribute("aria-label", "Video Motion preview");
@@ -406,6 +464,7 @@
                 posterButton.addEventListener("click", function () {
                   stopHoverPreview();
                   previouslyFocusedElement = this;
+                  drivePreviewContainer.classList.toggle("is-portrait", orientation === "portrait");
                   drivePreviewFrame.src = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
                   videoModal.style.display = "flex";
                   document.body.style.overflow = "hidden";
