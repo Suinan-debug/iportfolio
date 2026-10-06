@@ -1585,8 +1585,16 @@ section,
     width: 50%;
   }
 
-  .portfolio .portfolio-grid .video-poster-wrapper {
-    aspect-ratio: 4 / 5 !important;
+  .portfolio .portfolio-grid > .portfolio-item.filter-app {
+    width: 100%;
+  }
+
+  .portfolio .portfolio-grid .video-poster-wrapper[data-video-orientation="portrait"] {
+    aspect-ratio: 9 / 16 !important;
+  }
+
+  .portfolio .portfolio-grid .video-poster-wrapper[data-video-orientation="landscape"] {
+    aspect-ratio: 16 / 9 !important;
   }
 }
 
