@@ -190,7 +190,7 @@
           </div>
 
 
-           <div class="col-lg-4">
+          <div class="col-lg-4">
             <!-- <img src="assets/img/VINCE.jpg" class="img-fluid" alt="Vince Lawrence Suinan" /> -->
           </div>
           <div class="col-lg-8 content">
@@ -263,8 +263,8 @@
                 <button type="button" aria-pressed="true">
                   <img src="assets/img/portfolio/3danimation/img/moonknight.png" alt="" />
                   <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
-                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">Explore everything</span><span
-                      class="portfolio-filter-name">All projects</span></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">Explore
+                      everything</span><span class="portfolio-filter-name">All projects</span></span>
                 </button>
               </li>
               <li data-filter=".filter-app">
@@ -291,11 +291,11 @@
                       class="portfolio-filter-name">3D models</span></span>
                 </button>
               </li>
-                <li data-filter=".filter-model">
+              <li data-filter=".filter-ledcontent">
                 <button type="button" aria-pressed="false">
                   <img src="https://lh3.googleusercontent.com/d/1D0_6kJki84QCcM3gyjtBgr1WMdwW6Qse=w640" alt="" />
                   <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
-                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">04 / Form</span><span
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">04 / LED Content</span><span
                       class="portfolio-filter-name">LED Content/Simulation</span></span>
                 </button>
               </li>
@@ -303,15 +303,15 @@
                 <button type="button" aria-pressed="false">
                   <img src="https://lh3.googleusercontent.com/d/16SK4Unks-tOwlZld4EUyKw5LPhYBngFh=w640" alt="" />
                   <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
-                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">04 / Illustration</span><span
-                      class="portfolio-filter-name">Digital art</span></span>
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">05 /
+                      Illustration</span><span class="portfolio-filter-name">Digital art</span></span>
                 </button>
               </li>
               <li data-filter=".filter-books">
                 <button type="button" aria-pressed="false">
                   <img src="assets/img/portfolio/gameassets/optimized/16.png" alt="" />
                   <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
-                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">05 / Interactive</span><span
+                  <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">06 / Interactive</span><span
                       class="portfolio-filter-name">Game assets</span></span>
                 </button>
               </li>
@@ -327,10 +327,12 @@
               aria-pressed="false">Posters</button>
             <button type="button" data-filter=".filter-model" aria-label="Show 3D models"
               aria-pressed="false">3D</button>
+            <button type="button" data-filter=".filter-ledcontent" aria-label="Show LED Content/Simulation"
+              aria-pressed="false">LED Content/Simulation</button>
             <button type="button" data-filter=".filter-digitalart" aria-label="Show digital art"
               aria-pressed="false">Digital art</button>
-            <button type="button" data-filter=".filter-books" aria-label="Show game assets"
-              aria-pressed="false">Game assets</button>
+            <button type="button" data-filter=".filter-books" aria-label="Show game assets" aria-pressed="false">Game
+              assets</button>
           </nav>
 
           <section class="portfolio-showcase" aria-labelledby="portfolio-showcase-title">
@@ -878,9 +880,9 @@
                   card.setAttribute("aria-label", `View ${item.alt}`);
                   card.tabIndex = isDuplicate ? -1 : 0;
                   card.style.transform = `rotate(${(index % 5 - 2) * 2}deg)`;
-                    image.src = item.src;
-                    image.loading = "lazy";
-                    image.decoding = "async";
+                  image.src = item.src;
+                  image.loading = "lazy";
+                  image.decoding = "async";
                   image.alt = isDuplicate ? "" : item.alt;
                   card.appendChild(image);
                   card.addEventListener("click", function () {
@@ -934,15 +936,20 @@
                 <span class="service-category">Motion / Film</span>
               </div>
               <h3>3D Video &amp; Motion Graphics</h3>
-              <p class="service-summary">High-impact motion design and cinematic rendering that capture attention and communicate brand stories.</p>
+              <p class="service-summary">High-impact motion design and cinematic rendering that capture attention and
+                communicate brand stories.</p>
               <details class="service-details">
-                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i>
+                </summary>
                 <div class="service-details-copy">
-                  <p><strong>Deliverables</strong> Product reveals, commercial ads, logo stings, LED and digital signage simulations, and promotional video collateral.</p>
-                  <p><strong>Focus</strong> Dynamic camera movement, smooth pacing, high-end visual effects, and expressive audio-visual timing.</p>
+                  <p><strong>Deliverables</strong> Product reveals, commercial ads, logo stings, LED and digital signage
+                    simulations, and promotional video collateral.</p>
+                  <p><strong>Focus</strong> Dynamic camera movement, smooth pacing, high-end visual effects, and
+                    expressive audio-visual timing.</p>
                 </div>
               </details>
-              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right"
+                  aria-hidden="true"></i></a>
             </article>
           </div>
 
@@ -954,15 +961,20 @@
                 <span class="service-category">Objects / Space</span>
               </div>
               <h3>3D Modeling</h3>
-              <p class="service-summary">Detailed 3D assets for product visualization, spatial concepts, and digital environments.</p>
+              <p class="service-summary">Detailed 3D assets for product visualization, spatial concepts, and digital
+                environments.</p>
               <details class="service-details">
-                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i>
+                </summary>
                 <div class="service-details-copy">
-                  <p><strong>Deliverables</strong> Architectural and spatial mockups, product models, hard-surface props, and textured environments.</p>
-                  <p><strong>Focus</strong> Accurate proportions, realistic texturing, optimized topology, and studio lighting setups.</p>
+                  <p><strong>Deliverables</strong> Architectural and spatial mockups, product models, hard-surface
+                    props, and textured environments.</p>
+                  <p><strong>Focus</strong> Accurate proportions, realistic texturing, optimized topology, and studio
+                    lighting setups.</p>
                 </div>
               </details>
-              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right"
+                  aria-hidden="true"></i></a>
             </article>
           </div>
 
@@ -974,15 +986,20 @@
                 <span class="service-category">Campaign / Identity</span>
               </div>
               <h3>Social Posters &amp; Brand Collateral</h3>
-              <p class="service-summary">Digital graphics designed to strengthen brand identity and connect with audiences across platforms.</p>
+              <p class="service-summary">Digital graphics designed to strengthen brand identity and connect with
+                audiences across platforms.</p>
               <details class="service-details">
-                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i>
+                </summary>
                 <div class="service-details-copy">
-                  <p><strong>Deliverables</strong> Promotional banners, ad campaigns, event posters, carousel graphics, and social templates.</p>
-                  <p><strong>Focus</strong> Strong visual hierarchy, bold typography, layout balance, and platform-specific formatting.</p>
+                  <p><strong>Deliverables</strong> Promotional banners, ad campaigns, event posters, carousel graphics,
+                    and social templates.</p>
+                  <p><strong>Focus</strong> Strong visual hierarchy, bold typography, layout balance, and
+                    platform-specific formatting.</p>
                 </div>
               </details>
-              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right"
+                  aria-hidden="true"></i></a>
             </article>
           </div>
 
@@ -994,15 +1011,20 @@
                 <span class="service-category">Illustration / Concept</span>
               </div>
               <h3>2D Digital Art &amp; Concept Illustration</h3>
-              <p class="service-summary">Custom artwork and visual development that establish mood, style, and character for creative projects.</p>
+              <p class="service-summary">Custom artwork and visual development that establish mood, style, and character
+                for creative projects.</p>
               <details class="service-details">
-                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i></summary>
+                <summary><span>Explore deliverables &amp; focus</span><i class="bi bi-plus-lg" aria-hidden="true"></i>
+                </summary>
                 <div class="service-details-copy">
-                  <p><strong>Deliverables</strong> Character key art, concept sketches, visual assets, and digital paintwork.</p>
-                  <p><strong>Focus</strong> Composition, color theory, lighting, mood, and detailed digital rendering.</p>
+                  <p><strong>Deliverables</strong> Character key art, concept sketches, visual assets, and digital
+                    paintwork.</p>
+                  <p><strong>Focus</strong> Composition, color theory, lighting, mood, and detailed digital rendering.
+                  </p>
                 </div>
               </details>
-              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+              <a class="service-inquiry" href="#contact">Discuss this service <i class="bi bi-arrow-up-right"
+                  aria-hidden="true"></i></a>
             </article>
           </div>
         </div>
