@@ -252,7 +252,7 @@
         </p>
       </div>
       <!-- End Section Title -->
-      <div class="container portfolio-categories-container">
+      <div class="container   ">
         <div class="isotope-layout showcase-active" data-default-filter="*" data-layout="masonry"
           data-sort="original-order">
           <div class="portfolio-category-panel">
@@ -293,7 +293,7 @@
               </li>
               <li data-filter=".filter-ledcontent">
                 <button type="button" aria-pressed="false">
-                  <img src="https://lh3.googleusercontent.com/d/1D0_6kJki84QCcM3gyjtBgr1WMdwW6Qse=w640" alt="" />
+                  <img src="assets/img/portfolio/3danimation/img/intro_iloilo.png" alt="" />
                   <span class="portfolio-filter-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
                   <span class="portfolio-filter-copy"><span class="portfolio-filter-kicker">04 / LED Content</span><span
                       class="portfolio-filter-name">LED Content/Simulation</span></span>
@@ -328,7 +328,7 @@
             <button type="button" data-filter=".filter-model" aria-label="Show 3D models"
               aria-pressed="false">3D</button>
             <button type="button" data-filter=".filter-ledcontent" aria-label="Show LED Content/Simulation"
-              aria-pressed="false"> LED Content/Simulation</button>
+              aria-pressed="false">LED Content/Simulation</button>
             <button type="button" data-filter=".filter-digitalart" aria-label="Show digital art"
               aria-pressed="false">Digital art</button>
             <button type="button" data-filter=".filter-books" aria-label="Show game assets" aria-pressed="false">Game
@@ -393,7 +393,7 @@
               videoModal.className = "video-motion-modal";
               videoModal.setAttribute("role", "dialog");
               videoModal.setAttribute("aria-modal", "true");
-              videoModal.setAttribute("aria-label", "Video Motion preview");
+              videoModal.setAttribute("aria-label", "Portfolio video preview");
               videoModal.style.cssText =
                 "box-sizing:border-box; display:none; position:fixed; inset:0; z-index:9999; align-items:center; justify-content:center; padding:clamp(8px,3vw,24px); background:rgba(0,0,0,.9);";
 
@@ -480,6 +480,63 @@
                   document.body.style.overflow = "hidden";
                   closeVideoButton.focus();
                 });
+                videomotionContainer.appendChild(col);
+              });
+
+              const ledContentItems = [
+                {
+                  type: "image",
+                  src: "assets/img/portfolio/3danimation/img/intro_iloilo.png",
+                  title: "LED Content Image Example"
+                },
+                {
+                  type: "video",
+                  fileId: "1BN3EFIl9hsIu9_HIIbG-YD92J9_404a1",
+                  orientation: "landscape",
+                  title: "LED Content Video Example"
+                }
+              ];
+
+              ledContentItems.forEach(function (item) {
+                const col = document.createElement("div");
+                col.className = "col-lg-3 col-md-6 portfolio-item isotope-item filter-ledcontent";
+
+                if (item.type === "image") {
+                  col.innerHTML = `
+                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
+                      <img src="${item.src}" class="img-fluid" alt="${item.title}" loading="lazy" decoding="async" />
+                      <div class="portfolio-info d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+                        <h4>${item.title}</h4>
+                        <a href="${item.src}" data-type="image" data-gallery="portfolio-gallery-ledcontent" class="glightbox preview-link d-flex align-items-center justify-content-center" aria-label="View ${item.title}" style="width: 48px; height: 48px;">
+                          <i class="bi bi-zoom-in" style="font-size: 2rem;"></i>
+                        </a>
+                      </div>
+                    </div>
+                  `;
+                } else {
+                  const thumbnail = `https://lh3.googleusercontent.com/d/${item.fileId}=w640`;
+                  const orientation = item.orientation || "landscape";
+                  const thumbnailRatio = orientation === "portrait" ? "9 / 16" : "16 / 9";
+                  col.innerHTML = `
+                    <div class="portfolio-content h-100 d-flex flex-column align-items-center justify-content-center">
+                      <button type="button" class="video-poster-wrapper d-flex align-items-center justify-content-center" aria-label="Play ${item.title}" style="position:relative; width:100%; aspect-ratio:${thumbnailRatio}; padding:0; border:0; cursor:pointer; background:#111; overflow:hidden;">
+                        <img src="${thumbnail}" class="img-fluid" alt="${item.title}" loading="lazy" decoding="async" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
+                        <span class="play-btn-overlay d-flex align-items-center justify-content-center" aria-hidden="true" style="position:absolute; width:64px; height:64px; background:rgba(0,0,0,0.65); border-radius:50%; color:white; font-size:2.5rem;">
+                          <i class="bi bi-play-fill"></i>
+                        </span>
+                      </button>
+                    </div>
+                  `;
+                  col.querySelector(".video-poster-wrapper").addEventListener("click", function () {
+                    previouslyFocusedElement = this;
+                    drivePreviewContainer.classList.toggle("is-portrait", orientation === "portrait");
+                    drivePreviewFrame.src = `https://drive.google.com/file/d/${item.fileId}/preview?autoplay=1`;
+                    videoModal.style.display = "flex";
+                    document.body.style.overflow = "hidden";
+                    closeVideoButton.focus();
+                  });
+                }
+
                 videomotionContainer.appendChild(col);
               });
             </script>
@@ -850,7 +907,7 @@
               const portfolioShowcase = document.querySelector(".portfolio-showcase");
               const portfolioShowcaseDeck = portfolioShowcase.querySelector(".portfolio-showcase-deck");
               const portfolioShowcaseItems = Array.from(
-                document.querySelectorAll("#portfolio .filter-product img, #portfolio .filter-model img, #portfolio .filter-digitalart img, #portfolio .filter-books img")
+                document.querySelectorAll("#portfolio .filter-product img, #portfolio .filter-model img, #portfolio .filter-ledcontent img, #portfolio .filter-digitalart img, #portfolio .filter-books img")
               ).map(function (image) {
                 return {
                   src: image.src,
